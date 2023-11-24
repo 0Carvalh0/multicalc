@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adição</title>
+    <link rel="shortcut icon" href="image/calculadora.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ADIÇÃO</h1>
+    <div class="calculadora">
+        <div class="num1">
+            <input type="number" name="num1" id="num1" class="num">
+            <p>+</p>
+            <input type="number" name="num2" id="num2" class="num">
+            <div id="res"></div>
+            <div class="btn" onclick="numpad0()">
+                0
+            </div>
+            <div class="btn" onclick="numpad1()">
+                1
+            </div>
+            <div class="btn" onclick="numpad2()">
+                2
+            </div><br>
+            <div class="btn" onclick="numpad3()">
+                3
+            </div>
+            <div class="btn" onclick="numpad4()">
+                4
+            </div>
+            <div class="btn" onclick="numpad5()">
+                5
+            </div><br>
+            <div class="btn" onclick="numpad6()">
+                6
+            </div>
+            <div class="btn" onclick="numpad7()">
+                7
+            </div>
+            <div class="btn" onclick="numpad8()">
+                8
+            </div><br>
+            <div class="btn" onclick="numpad9()">
+                9
+            </div>
+            <input type="button" value="=" onclick="adicao()" class="btn" id="btnres">
+            <div><a href="index.html" target="_self" rel="prev" ><img src="image/voltar.png" alt=""></a></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

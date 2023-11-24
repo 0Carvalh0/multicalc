@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+/* font-family: 'Kdam Thmor Pro', sans-serif; */
+
+body {
+    font: normal 18pt Arial;
+    color: white;
+    background-color: #3BAEE6;
+    text-align: center;
+    margin: auto;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+body.principal {
+    background-image: linear-gradient(to bottom, #3BAEE6, #133647);
+    padding-top: 3em;
+    padding-bottom: 7.96em;
+}
+
+h1, h2 {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    text-shadow: -2px 2px 3px rgba(0, 0, 0, 0.466);
+}
+
+a {
+    text-decoration: none;
+    text-shadow: 1px 1px 5px black;
+}
+
+.btnmenu {
+    background-image: radial-gradient(#408fb9, #287399);
+    color: white;
+    border-style: solid;
+    border-color: #133647;
+    margin-top: 10px;
+    margin-left: 10pt;
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;
+    height: 80px;
+    line-height: 80px;
+    box-shadow: 5px 5px 3px #13364759;
+}
+
+.btnmenu:active {
+    background: #3BAEE6;
+}
+
+div.btnmenu > p {
+    font-size: 27px;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background: #1D5570;
+    border-style: solid;
+    border-color: #133647;
+    border-radius: 10px;
+    height: 510px;
+    width: 300px;
+    padding-top: 20px;
+    box-shadow: 5px 5px #13364759;
+}
+
+.metro {
+    width: 370px;
+}
+
+.btn {
+    font: normal 18pt Arial;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    background-color: #3BAEE6;
+    color: white;
+    box-shadow: 3px 3px 3px black;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+#btnres {
+    width: 130px;
+}
+
+.btn:active {
+    background-color: #287399;
+}
+
+#res {
+    padding-top: 10px;
+    font-size: 40px;
+    text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.404);
+}
+
+p {
+    display: inline;
+    font-size: 50px;
+    text-shadow: -2px 2px 7px black;
+}
+
+.num {
+    height: 50px;
+    font-size: 50px;
+    text-align: center;
+    width: 70px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px black;
+}
+
+img {
+    width: 50px;
+    margin-top: 15px;
+}
