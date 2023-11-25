@@ -7,13 +7,12 @@
     <link rel="shortcut icon" href="../image/calculadora.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/style.css">
 </head>
-<body>
+<body id="media">
     <h1>MÉDIA ARITMÉTICA</h1>
     <div class="calculadora">
         <div class="num1">
             <input type="number" name="num1" id="num1" class="num">
-            <p>+</p>
-            <input type="number" name="num2" id="num2" class="num"> <p>/ 2</p>
+            <input type="button" value="ADICIONAR" class="btn" id="btnadd">
             <div id="res"></div>
             <div class="btn" onclick="numpad0()">
                 0
@@ -48,6 +47,11 @@
             <input type="button" value="=" onclick="media()" class="btn" id="btnres">
             <div><a href="index.html" target="_self" rel="prev"><img src="../image/voltar.png" alt=""></a></div>
         </div>
+    </div>
+    <div class="calculadora" id="listacalc">
+        <p>Lista de Números</p>
+        <select name="lista" id="lista" size = 8px>
+        </select>
     </div>
     <script src="../script/script.js"></script>
 </body>

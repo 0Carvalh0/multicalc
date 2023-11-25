@@ -61,7 +61,7 @@ div.btnmenu > p {
 
 .calculadora {
     margin: auto;
-    display: flex;
+    display: block;
     justify-content: center;
     background: #1D5570;
     border-style: solid;
@@ -73,8 +73,24 @@ div.btnmenu > p {
     box-shadow: 5px 5px #13364759;
 }
 
+body#media > div {
+    display: inline-table;
+}
+
 .metro {
     width: 370px;
+}
+
+div#listacalc {
+    height: 280px;
+}
+
+select#lista {
+    width: 250px;
+}
+
+#btnadd {
+    width: 150px;
 }
 
 .btn {
