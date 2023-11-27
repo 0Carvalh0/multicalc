@@ -81,6 +81,10 @@ div.btnmenu > p {
     box-shadow: 5px 5px #13364759;
 }
 
+.num1 p {
+    font-size: 20px;
+}
+
 body#media > div {
     display: inline-table;
 }
