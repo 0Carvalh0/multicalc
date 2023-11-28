@@ -65,6 +65,17 @@ function imc() {
   res.innerText = `<p>${nome}, ${peso}, ${altura}, ${imc}</p>`
 }
 
+/*
+TABELA DE REFERENCIA:
+-17 == Muito abaixo
+17 e 18,5 == Abaixo
+18,5 e 24,9 == Normal
+25 e 29,9 == Acima
+30 e 34,9 == Obesidade I
+35 e 39,9 == Obesidade II (severa)
++40 == Obesidade III (mórbida)
+*/
+
 function numpad0() {
   n1.value += 0
 }
