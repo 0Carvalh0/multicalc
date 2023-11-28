@@ -4,9 +4,9 @@
   02 - Tamanho do input number não esta responsivo só aparece os 2 primeiros dígitos do número
 */
 
-var n1 = window.document.getElementById('num1')
-var n2 = window.document.getElementById('num2')
-var res = window.document.getElementById('res')
+var n1 = document.getElementById('num1')
+var n2 = document.getElementById('num2')
+var res = document.getElementById('res')
 
 function adicao() {
   var num1 = Number(n1.value)
@@ -57,6 +57,13 @@ function metro2() {
   res.innerHTML = `<strong>${m}m²</strong>`
 }
 
+function imc() {
+  var nome = document.querySelector('input#nome').value
+  var peso = document.querySelector('input#peso').value
+  var altura = document.querySelector('input#altura').value
+  var imc = peso / (altura ** 2)
+  res.innerText = `<p>${nome}, ${peso}, ${altura}, ${imc}</p>`
+}
 
 function numpad0() {
   n1.value += 0
