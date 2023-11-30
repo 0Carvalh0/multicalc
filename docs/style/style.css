@@ -84,6 +84,22 @@ div.btnmenu:hover > p {
     align-items: center;
 }
 
+#container {
+    display: flex;
+}
+
+#lista {
+    background-color: var(--cor5);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#lista::-webkit-scrollbar {
+    appearance: none;
+}
+
 .calculadora {
     margin: auto;
     display: block;
@@ -96,6 +112,11 @@ div.btnmenu:hover > p {
     width: 300px;
     padding-top: 20px;
     box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.301);
+}
+
+#num1::-webkit-inner-spin-button,
+#num1::-webkit-outer-spin-button {
+    appearance: none;
 }
 
 .numimc p {
