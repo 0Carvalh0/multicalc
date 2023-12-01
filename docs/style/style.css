@@ -60,6 +60,7 @@ div.btnmenu:hover {
     color: --cor1;
     background: var(--cor5);
     border-color: var(--cor2);
+    padding: 0.3em;
     transition-duration: 0.2s;
 }
 
@@ -114,8 +115,8 @@ div.btnmenu:hover > p {
     box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.301);
 }
 
-#num1::-webkit-inner-spin-button,
-#num1::-webkit-outer-spin-button {
+.num::-webkit-inner-spin-button,
+.num::-webkit-outer-spin-button {
     appearance: none;
 }
 
