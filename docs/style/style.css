@@ -1,13 +1,27 @@
 @charset "UTF-8";
+
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
-/* font-family: 'Kdam Thmor Pro', sans-serif; */
+:root {
+    --font-default: Arial, Helvetica, sans-serif;
+    --font-default2: 'Kdam Thmor Pro', sans-serif;
+
+    --cor1: #3BAEE6;
+    --cor2: #408fb9;
+    --cor3: #287399;
+    --cor4: #1D5570;
+    --cor5: #133647;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
 
 body {
-    font: normal 18pt Arial;
+    font-family: var(--font-default);
     color: white;
-    height: 26.97em;
-    background-image: linear-gradient(195deg, #3BAEE6, #133647);
+    background-image: linear-gradient(195deg, var(--cor1), var(--cor5));
     text-align: center;
     margin: auto;
     margin-right: 50px;
@@ -15,26 +29,23 @@ body {
 }
 
 body.principal {
-    background-image: linear-gradient(195deg, #3BAEE6, #133647);
-    padding-top: 3em;
-    padding-bottom: 7.96em;
+    padding: 2em;
 }
 
 h1, h2 {
-    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-family: var(--font-default2);
     text-shadow: -2px 2px 3px rgba(0, 0, 0, 0.466);
 }
 
 a {
     text-decoration: none;
-    text-shadow: 1px 1px 5px black;
 }
 
 div.btnmenu {
-    background-image: radial-gradient(#408fb9, #287399);
+    background-image: radial-gradient( var(--cor3), var(--cor4));
     color: white;
     border-style: solid;
-    border-color: #133647;
+    border-color: var(--cor5);
     margin-top: 10px;
     margin-left: 10pt;
     border-radius: 20px;
@@ -42,43 +53,71 @@ div.btnmenu {
     width: 350px;
     height: 80px;
     line-height: 80px;
-    box-shadow: 5px 5px 3px #13364759;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.171);
 }
 
 div.btnmenu:hover {
-    color: #3BAEE6;
-    background: #133647;
-    border-color: #359bce;
+    color: --cor1;
+    background: var(--cor5);
+    border-color: var(--cor2);
+    padding: 0.3em;
     transition-duration: 0.2s;
 }
 
 div.btnmenu:active {
-    background: #3BAEE6;
+    background: var(--cor1);
 }
 
 div.btnmenu > p {
     font-size: 27px;
 }
 
+div.btnmenu:hover > p {
+    font-size: 29px;
+    transition-duration: 0.5s;
+}
+
 .container {
     display: flex;
+    flex-direction: column;
     margin: auto;
     justify-content: center;
     align-items: center;
+}
+
+#container {
+    display: flex;
+}
+
+#lista {
+    background-color: var(--cor5);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#lista::-webkit-scrollbar {
+    appearance: none;
 }
 
 .calculadora {
     margin: auto;
     display: block;
     justify-content: center;
-    background: #1D5570;
+    background: #1d54704f;
     border-style: solid;
-    border-color: #133647;
-    border-radius: 10px;
+    border-color: var(--cor5);
+    border-radius: 8px;
     height: 510px;
     width: 300px;
     padding-top: 20px;
-    box-shadow: 5px 5px #13364759;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.301);
+}
+
+.num::-webkit-inner-spin-button,
+.num::-webkit-outer-spin-button {
+    appearance: none;
 }
 
 .numimc p {
@@ -86,15 +125,17 @@ div.btnmenu > p {
 }
 
 body#media > div {
-    display: inline-table;
-}
-
-.metro {
-    width: 370px;
+    display: flex;
+    flex-flow: wrap;
+    margin-top: 10px;
 }
 
 div#listacalc {
     height: 280px;
+}
+
+.metro {
+    width: 370px;
 }
 
 select#lista {
@@ -102,33 +143,37 @@ select#lista {
 }
 
 #btnadd {
-    width: 150px;
+    width: 160px;
 }
 
 .btn {
-    font: normal 18pt Arial;
+    font-family: var(--font-default);
+    font-size: 1.5em;
+    font-weight: bold;
     width: 50px;
     height: 50px;
     line-height: 50px;
     display: inline-block;
-    background-color: #3BAEE6;
+    background-color: var(--cor1);
     color: white;
-    box-shadow: 3px 3px 3px black;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.418);
     border-radius: 10px;
+    border-style: groove;
+    border-color: var(--cor4);
     margin: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #btnres {
-    width: 130px;
+    width: 140px;
 }
 
 .btn:active {
-    background: #0c2430;
+    background: var(--cor5);
 }
 
 .btn:hover {
-    background: #287399;
+    background: var(--cor3);
     transition-duration: 0.2s;
 }
 
@@ -140,8 +185,8 @@ select#lista {
 
 p {
     display: inline;
-    font-size: 50px;
-    text-shadow: -2px 2px 7px black;
+    font-size: 35px;
+    text-shadow: -2px 2px 7px rgba(0, 0, 0, 0.432);
 }
 
 .num {
@@ -150,10 +195,12 @@ p {
     text-align: center;
     width: 70px;
     border-radius: 5px;
-    box-shadow: 2px 2px 3px black;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.384);
 }
 
 img {
     width: 50px;
     margin-top: 15px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.432);
 }
