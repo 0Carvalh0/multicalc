@@ -89,8 +89,8 @@ div.btnmenu:hover > p {
 }
 
 #container {
-    display: inline-block;
-    position: relative;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 #lista {
@@ -99,6 +99,7 @@ div.btnmenu:hover > p {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    position: relative;
 }
 
 #lista::-webkit-scrollbar {
@@ -116,10 +117,6 @@ div.btnmenu:hover > p {
     width: 300px;
     padding-top: 20px;
     box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.301);
-}
-
-div#media {
-    float: left;
 }
 
 .num::-webkit-inner-spin-button,
@@ -165,10 +162,6 @@ select#lista {
     border-color: var(--cor4);
     margin: 10px;
     margin-top: 10px;
-}
-
-#btnres {
-    width: 140px;
 }
 
 .btn:active {
