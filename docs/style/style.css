@@ -21,7 +21,7 @@
 body {
     font-family: var(--font-default);
     color: white;
-    background-image: linear-gradient(195deg, var(--cor1), var(--cor5));
+    background: linear-gradient(195deg, var(--cor1), var(--cor5)) fixed;
     background-size: auto;
     background-position: center;
     height: 100%;
@@ -83,15 +83,14 @@ div.btnmenu:hover > p {
 
 .container {
     display: flex;
-    flex-direction: column;
     flex-flow: row wrap;
     margin: auto;
     justify-content: center;
 }
 
 #container {
-    display: flex;
-    flex-flow: row wrap;
+    display: inline-block;
+    position: relative;
 }
 
 #lista {
@@ -119,6 +118,10 @@ div.btnmenu:hover > p {
     box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.301);
 }
 
+div#media {
+    float: left;
+}
+
 .num::-webkit-inner-spin-button,
 .num::-webkit-outer-spin-button {
     appearance: none;
@@ -129,14 +132,9 @@ div.btnmenu:hover > p {
     display: block;
 }
 
-body#media > div {
-    display: flex;
-    flex-flow: row wrap;
-    margin-top: 10px;
-}
-
 div#listacalc {
     height: 280px;
+    margin-left: 30px;
 }
 
 .metro {
