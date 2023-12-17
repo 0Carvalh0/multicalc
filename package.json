@@ -1,0 +1,14 @@
+{
+  "name": "megacalculadora",
+  "version": "1.0.0",
+  "description": "Meu primeiro projeto em desenvolvimento, calculadora com diversos calculos utilizando HTML5, CSS3 e JavaScript",
+  "main": "index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "João Victor Carvalho de Souza",
+  "license": "ISC"
+}
