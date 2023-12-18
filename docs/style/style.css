@@ -24,7 +24,6 @@ body {
     background: linear-gradient(195deg, var(--cor1), var(--cor5)) fixed;
     background-size: auto;
     background-position: center;
-    height: 100%;
     text-align: center;
     margin: auto;
     margin-right: 50px;
@@ -46,7 +45,7 @@ a {
 }
 
 div.btnmenu {
-    background-image: radial-gradient( var(--cor3), var(--cor4));
+    background-image: radial-gradient(var(--cor3), var(--cor4));
     color: white;
     border-style: solid;
     border-color: var(--cor5);
@@ -116,10 +115,6 @@ div.btnmenu:hover > p {
     width: 300px;
     padding-top: 20px;
     box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.301);
-}
-
-div#media {
-    float: left;
 }
 
 .num::-webkit-inner-spin-button,
