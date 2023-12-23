@@ -67,6 +67,5 @@ function numpad9() {
 
 function limpar() {
   n1.value = ''
-  n2.value = ''
-  res.innerHTML = ""
+  res.innerHTML = ''
 }
