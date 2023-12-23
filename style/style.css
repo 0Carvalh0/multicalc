@@ -38,6 +38,8 @@ body.principal {
 h1, h2 {
     font-family: var(--font-default2);
     text-shadow: -2px 2px 3px rgba(0, 0, 0, 0.466);
+    font-size: 3em;
+
 }
 
 a {
@@ -54,8 +56,8 @@ div.btnmenu {
     border-radius: 20px;
     text-align: center;
     width: 350px;
-    height: 80px;
-    line-height: 80px;
+    height: 90px;
+    line-height: 90px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.171);
 }
 
@@ -88,8 +90,30 @@ div.btnmenu:hover > p {
 }
 
 #container {
-    display: inline-block;
     position: relative;
+    width: 96vw;
+    height: 89vh;
+}
+
+.calcmedia {
+    position: absolute;
+    height: 510px;
+    width: 300px;
+    padding-top: 20px;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.301);
+    background: #1d54704f;
+    border-style: solid;
+    border-color: var(--cor5);
+    border-radius: 8px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+#listacalc {
+    transform: translate(50%, -50%);
 }
 
 #lista {
@@ -98,6 +122,7 @@ div.btnmenu:hover > p {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    position: relative;
 }
 
 #lista::-webkit-scrollbar {
@@ -160,10 +185,6 @@ select#lista {
     border-color: var(--cor4);
     margin: 10px;
     margin-top: 10px;
-}
-
-#btnres {
-    width: 140px;
 }
 
 .btn:active {

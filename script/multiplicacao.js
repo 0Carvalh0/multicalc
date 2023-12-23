@@ -1,28 +1,12 @@
 var n1 = document.getElementById('num1')
+var n2 = document.getElementById('num2')
 var res = document.getElementById('res')
-var lista = document.getElementById('lista')
-var n = []
 
-function add() {
-  var item = document.createElement('option')
-  n.push(Number(n1.value))
-  item.text = `Valor adicionado: ${n1.value}`
-  lista.appendChild(item)
-  res.innerHTML = ''
-  
-  n1.value = ''
-  n1.focus()
-}
-
-function media() {
-  let total = n.length
-  let soma = 0
-  let media = 0
-  for (let pos in n) {
-    soma += n[pos]
-  }
-  media = soma / total
-  res.innerHTML += `${media}`
+function multiplicacao() {
+  var num1 = Number(n1.value)
+  var num2 = Number(n2.value)
+  var m = num1 * num2
+  res.innerHTML = `<strong>${m}</strong>`
 }
 
 function numpad0() {
@@ -63,4 +47,10 @@ function numpad8() {
 
 function numpad9() {
   n1.value += 9
+}
+
+function limpar() {
+  n1.value = ''
+  n2.value = ''
+  res.innerHTML = ""
 }

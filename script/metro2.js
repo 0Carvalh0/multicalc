@@ -2,11 +2,11 @@ var n1 = document.getElementById('num1')
 var n2 = document.getElementById('num2')
 var res = document.getElementById('res')
 
-function multiplicacao() {
+function metro2() {
   var num1 = Number(n1.value)
   var num2 = Number(n2.value)
   var m = num1 * num2
-  res.innerHTML = `<strong>${m}</strong>`
+  res.innerHTML = `<strong>${m}m²</strong>`
 }
 
 function numpad0() {
@@ -47,4 +47,10 @@ function numpad8() {
 
 function numpad9() {
   n1.value += 9
+}
+
+function limpar() {
+  n1.value = ''
+  n2.value = ''
+  res.innerHTML = ""
 }
