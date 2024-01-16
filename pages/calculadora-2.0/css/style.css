@@ -21,34 +21,48 @@ main#container {
 
 main#container > section#calc {
     background-color: lightgray;
+    border: 5px groove rgba(0, 0, 0, 0.411);
+    border-radius: 50px;
+    box-shadow: -5px 5px rgba(0, 0, 0, 0.377);
     height: 70vh;
-    width: 50%;
+    min-width: 400px;
 
     padding: 20px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 main#container > section#calc > section#visor {
     background-color: lightblue;
-    height: 80px;
+    height: 20%;
     width: 95%;
     margin: auto;
-    margin-bottom: 20px;
-    border: 5px groove black;
+    border: 5px groove rgba(0, 0, 0, 0.404);
+    border-radius: 20px;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.527);
 }
 
-main#container > section#calc > section#teclado > section.linha {
-    display: flex;
-    justify-content: space-around;
-}
-
-table {
+table#teclado {
     width: 100%;
+    height: 100%;
+    transform: scaleY(90%);
 }
 
 input.botao {
     background-color: lightblue;
-    width: 100%;
-    height: 80px;
-    margin: 5px;
+    width: 90%;
+    height: 100%;
+
+    border-radius: 40px;
+    font-size: 3em;
+}
+
+input.botao:hover {
+    background-color: aqua;
+}
+
+input.botao:active {
+    background-color: rgb(55, 185, 228);
+    box-shadow: inset 0px 0px 10px black;
 }
