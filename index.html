@@ -22,25 +22,26 @@
     <main>
         <div class="main__container">
             <div class="calc__visor">
-                <input type="text" id="calc__input" minlength="3" required readonly>
+                <input type="text" id="calc__input" minlength="3" required <!--readonly-->
             </div>
+            
             <div class="calc__teclado">
-                <div class="tecla">7</div>
-                <div class="tecla">8</div>
-                <div class="tecla">9</div>
-                <div class="tecla">+</div>
-                <div class="tecla">4</div>
-                <div class="tecla">5</div>
-                <div class="tecla">6</div>
-                <div class="tecla">-</div>
-                <div class="tecla">1</div>
-                <div class="tecla">2</div>
-                <div class="tecla">3</div>
-                <div class="tecla">*</div>
-                <div class="tecla">0</div>
-                <div class="tecla">,</div>
-                <div class="tecla">=</div>
-                <div class="tecla">/</div>
+                <div class="tecla" onclick="addValor()">7</div>
+                <div class="tecla" onclick="addValor()">8</div>
+                <div class="tecla" onclick="addValor()">9</div>
+                <div class="tecla" onclick="addValor()">+</div>
+                <div class="tecla" onclick="addValor()">4</div>
+                <div class="tecla" onclick="addValor()">5</div>
+                <div class="tecla" onclick="addValor()">6</div>
+                <div class="tecla" onclick="addValor()">-</div>
+                <div class="tecla" onclick="addValor()">1</div>
+                <div class="tecla" onclick="addValor()">2</div>
+                <div class="tecla" onclick="addValor()">3</div>
+                <div class="tecla" onclick="addValor()">*</div>
+                <div class="tecla" onclick="addValor()">0</div>
+                <div class="tecla" onclick="addValor()">,</div>
+                <div class="tecla" onclick="addValor()">=</div>
+                <div class="tecla" onclick="addValor()">/</div>
             </div>
         </div>
     </main>
@@ -53,5 +54,7 @@
             <a href="#" class="media"><span class="fa-brands fa-stack-overflow"></span><span>Stack Overflow</span></a>
         </div>
     </footer>
+
+    <script src="src/scripts/index.js"></script>
 </body>
 </html>

@@ -97,6 +97,10 @@ body, html {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.419);
 }
 
+.main__container .calc__teclado .tecla::selection {
+    background-color: transparent;
+}
+
 footer {
     display: flex;
     position: fixed;
