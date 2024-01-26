@@ -1,46 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CalculaDamente</title>
-    <link rel="shortcut icon" href="image/calculadora.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="./src/images/icons/calculadora.ico" type="image/x-icon">
+    <title>CalculaJão</title>
+
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/style.css">
 </head>
-<body class="principal">
-    <!--PROBLEMAS NA CALCULADORA:
-    01 - Não consigo alternar a seleção entre os dois inputs de números (Como selecionar inputs e verificar qual input number esta selecionado)
-    02 - Tamanho do input number não esta responsivo só aparece os 2 primeiros dígitos do número
-    03 - Adicionar um botão para resetar toda a conta-->
+
+<body>
+    <header>
+        <div class="header__title">
+            <h1 class="text title">Bem-vindo ao CalculaJão</h1>
+            <h2 class="text subtitle">A melhor calculadora universal da terra</h2>
+        </div>
+    </header>
+
     <main>
-        <h1>CALCULADORA EXTREMAMENTE AVANÇADA DO CARVALHO</h1>
-        <h2>Escolha a conta que você quer fazer</h2>
-        <div class="container">
-            <a href="pages/adicao.html" rel="next" target="_self"><div class="btnmenu">
-                <p>ADIÇÃO</p>
-            </div></a>
-            <a href="pages/subtracao.html" rel="next" target="_self"><div class="btnmenu">
-                <p>SUBTRAÇÃO</p>
-            </div></a>
-            <a href="pages/multiplicacao.html" rel="next" target="_self"><div class="btnmenu">
-                <p>MULTIPLICAÇÃO</p>
-            </div></a>
-            <a href="pages/divisao.html" rel="next" target="_self"><div class="btnmenu">
-                <p>DIVISÃO</p>
-            </div></a>
-            <a href="pages/media.html" rel="next" target="_self"><div class="btnmenu">
-                <p>MÉDIA</p>
-            </div></a>
-            <a href="pages/pitagoras.html" rel="next" target="_self"><div class="btnmenu">
-                <p>PITÁGORAS</p>
-            </div></a>
-            <a href="pages/metro2.html" rel="next" target="_self"><div class="btnmenu">
-                <p>METRO²</p>
-            </div></a>
-            <a href="pages/imc.html" rel="next" target="_self"><div class="btnmenu">
-                <p>IMC</p>
-            </div></a>
+        <div class="main__container">
+            <div class="calc__visor">
+                <input type="text" id="calc__input" minlength="3" required>
+            </div>
+            <div class="calc__teclado">
+
+            </div>
         </div>
     </main>
+
+    <footer>
+        <p>Essa calculadora foi criada por <strong>João Victor Carvalho</strong> para fins meramente educativos, qualquer problema entrar em contato com responsavel por meio de suas redes sociais:</p>
+        <div class="social-media">
+            <div class="media"><span class="fa fa-icon"></span><span>Rede Social</span></div>
+            <div class="media"><span class="fa fa-icon"></span><span>Rede Social</span></div>
+            <div class="media"><span class="fa fa-icon"></span><span>Rede Social</span></div>
+        </div>
+    </footer>
 </body>
 </html>
