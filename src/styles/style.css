@@ -48,14 +48,16 @@ body, html {
     border-radius: 8px;
     width: 300px;
     height: 450px;
-    padding: 10px;
+    padding: 12px;
 }
 
 .main__container .calc__visor {
     background-color: #f1f1f1;
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.425);
     font-size: 2.5rem;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 8px;
+    margin-bottom: 12px;
 
     display: flex;
     align-items: center;
@@ -63,29 +65,28 @@ body, html {
 }
 
 .main__container .calc__teclado {
-    height: 85%;
+    height: 100%;
     width: 100%;
 
-    background-color: #a3a3a3;
-    margin: 20px auto;
-    padding: 10px;
-    border-radius: 8px;
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
 }
 
 .main__container .calc__teclado .tecla {
-    height: 60px;
-    width: 60px;
+    width: 65px;
+    height: 65px;
+    border: none;
 
-    background-color: #d3d3d3;
-    border: 1px groove rgba(0, 0, 0, 0.397);
     margin: 5px;
 
-    font-size: 2rem;
+    font-size: 1.5em;
 }
 
-.main__container .calc__teclado .tecla:hover {
-    background-color: #f1f1f1;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.419);
+.main__container .calc__teclado button.tecla:hover {
+    background-color: #dbdbdb;
+    box-shadow: 0px 0px 8px #fff;
+    transform: scale(1.1);
 }
 
 .main__container .calc__teclado .tecla::selection {
