@@ -1,60 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./src/images/icons/calculadora.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./src/images/icons/calculadora.ico"
+      type="image/x-icon"
+    />
     <title>CalculaJão</title>
 
-    <link rel="stylesheet" href="./src/styles/reset.css">
-    <link rel="stylesheet" href="./src/styles/style.css">
-    <script src="https://kit.fontawesome.com/9bfb2428d0.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/9bfb2428d0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="header__title">
-            <h1 class="text title">Bem-vindo ao CalculaJão</h1>
-            <h2 class="text subtitle">A melhor calculadora universal da terra</h2>
-        </div>
+      <div class="header__title">
+        <h1 class="text title">Bem-vindo ao CalculaJão</h1>
+        <h2 class="text subtitle">A melhor calculadora universal da terra</h2>
+      </div>
     </header>
 
     <main>
-        <div class="main__container">
-            <div class="calc__visor">
-                <input type="text" id="calc__input" minlength="3" required <!--readonly-->
-            </div>
-            
-            <div class="calc__teclado">
-                <div class="tecla" onclick="addValor()">7</div>
-                <div class="tecla" onclick="addValor()">8</div>
-                <div class="tecla" onclick="addValor()">9</div>
-                <div class="tecla" onclick="addValor()">+</div>
-                <div class="tecla" onclick="addValor()">4</div>
-                <div class="tecla" onclick="addValor()">5</div>
-                <div class="tecla" onclick="addValor()">6</div>
-                <div class="tecla" onclick="addValor()">-</div>
-                <div class="tecla" onclick="addValor()">1</div>
-                <div class="tecla" onclick="addValor()">2</div>
-                <div class="tecla" onclick="addValor()">3</div>
-                <div class="tecla" onclick="addValor()">*</div>
-                <div class="tecla" onclick="addValor()">0</div>
-                <div class="tecla" onclick="addValor()">,</div>
-                <div class="tecla" onclick="addValor()">=</div>
-                <div class="tecla" onclick="addValor()">/</div>
-            </div>
-        </div>
+      <div class="main__container">
+        <p class="calc__visor"></p>
+
+        <table class="calc__teclado">
+          <tr>
+            <td><button class="tecla" onclick="limpar()">C</button></td>
+            <td><button class="tecla" onclick="deletar()"><</button></td>
+            <td><button class="tecla" onclick="addValor('+')">+</button></td>
+            <td><button class="tecla" onclick="addValor('-')">-</button></td>
+          </tr>
+          <tr>
+            <td><button class="tecla" onclick="addValor('7')">7</button></td>
+            <td><button class="tecla" onclick="addValor('8')">8</button></td>
+            <td><button class="tecla" onclick="addValor('9')">9</button></td>
+            <td><button class="tecla" onclick="addValor('*')">X</button></td>
+          </tr>
+          <tr>
+            <td><button class="tecla" onclick="addValor('4')">4</button></td>
+            <td><button class="tecla" onclick="addValor('5')">5</button></td>
+            <td><button class="tecla" onclick="addValor('6')">6</button></td>
+            <td><button class="tecla" onclick="addValor('/')">÷</button></td>
+          </tr>
+          <tr>
+            <td><button class="tecla" onclick="addValor('1')">1</button></td>
+            <td><button class="tecla" onclick="addValor('2')">2</button></td>
+            <td><button class="tecla" onclick="addValor('3')">3</button></td>
+            <td rowspan="2">
+              <button class="tecla" onclick="calcular()">=</button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button class="tecla" onclick="addValor('0')">0</button>
+            </td>
+            <td><button class="tecla" onclick="addValor('.')">.</button></td>
+          </tr>
+        </table>
+      </div>
     </main>
 
     <footer>
-        <p>Essa calculadora foi criada por <strong>João Victor Carvalho</strong> para fins meramente educativos, qualquer problema entrar em contato com responsável por meio de suas redes sociais:</p>
-        <div class="social-media">
-            <a href="#" class="media"><span class="fa-brands fa-github"></span><span>GitHub</span></a>
-            <a href="#" class="media"><span class="fa-brands fa-linkedin"></span><span>LinkedIn</span></a>
-            <a href="#" class="media"><span class="fa-brands fa-stack-overflow"></span><span>Stack Overflow</span></a>
-        </div>
+      <p>
+        Essa calculadora foi criada por
+        <strong>João Victor Carvalho</strong> para fins meramente educativos,
+        qualquer problema entrar em contato com responsável por meio de suas
+        redes sociais:
+      </p>
+      <div class="social-media">
+        <a href="#" class="media"
+          ><span class="fa-brands fa-github"></span><span>GitHub</span></a
+        >
+        <a href="#" class="media"
+          ><span class="fa-brands fa-linkedin"></span><span>LinkedIn</span></a
+        >
+        <a href="#" class="media"
+          ><span class="fa-brands fa-stack-overflow"></span
+          ><span>Stack Overflow</span></a
+        >
+      </div>
     </footer>
 
     <script src="src/scripts/index.js"></script>
-</body>
+  </body>
 </html>
