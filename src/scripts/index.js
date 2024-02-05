@@ -2,10 +2,14 @@ const res = document.getElementById("calc__visor");
 
 function addValor(num) {
   let texto = document.querySelector("p#calc__visor").innerHTML;
-  if (texto === "[ERRO]...") {
-    res.innerHTML = num;
+
+  if (num === "+" || num === "-" || num === "/" || num === "*" || num === ".") {
   } else {
-    res.innerHTML += num;
+    if (texto === "[ERRO]...") {
+      res.innerHTML = num;
+    } else {
+      res.innerHTML += num;
+    }
   }
 }
 
