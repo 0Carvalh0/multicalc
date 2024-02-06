@@ -22,7 +22,31 @@ html {
   background: var(--cor5) linear-gradient(145deg, #287399, #133647);
 }
 
+.header {
+  width: 100vw;
+}
+
+.header__menuhamburguer {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+}
+
+.header__menuhamburguer span {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+
+  font-size: 30px;
+}
+
+.header__menuhamburguer ul {
+  display: none;
+}
+
 .header__title {
+  margin: auto;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
