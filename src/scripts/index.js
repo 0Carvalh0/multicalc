@@ -3,6 +3,7 @@ const res = document.getElementById("calc__visor");
 function addValor(num) {
   let texto = document.querySelector("p#calc__visor").innerHTML;
 
+  // Não colocar mais de 1 operação matemática ou ponto seguido
   if (num === "+" || num === "-" || num === "/" || num === "*" || num === ".") {
   } else {
     if (texto === "[ERRO]...") {

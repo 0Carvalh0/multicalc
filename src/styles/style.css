@@ -1,136 +1,135 @@
 :root {
-    --font-default: Arial, Helvetica, sans-serif;
+  --font-default: Arial, Helvetica, sans-serif;
 
-    --cor1: #3BAEE6;
-    --cor2: #408fb9;
-    --cor3: #287399;
-    --cor4: #1D5570;
-    --cor5: #133647;
+  --cor1: #3baee6;
+  --cor2: #408fb9;
+  --cor3: #287399;
+  --cor4: #1d5570;
+  --cor5: #133647;
 }
 
-body, html {
-    width: 100vw;
-    height: 100vh;
-    box-sizing: border-box;
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-    font-family: var(--font-default);
-    background: var(--cor5) linear-gradient(175deg, #287399, #133647);
+  font-family: var(--font-default);
+  background: var(--cor5) linear-gradient(175deg, #287399, #133647);
 }
 
 .header__title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    padding: 20px;
+  padding: 20px;
 
-    color: #fff;
-    text-shadow: -2px 2px 8px rgba(0, 0, 0, 0.404);
+  color: #fff;
+  text-shadow: -2px 2px 8px rgba(0, 0, 0, 0.404);
 }
 
 .header__title .title {
-    font-size: 1.8rem;
-    font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
 .header__title .subtitle {
-    font-size: 1.3rem;
-    font-weight: 500;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 .main__container {
-    background-color: #b3b3b3;
-    border-radius: 8px;
-    width: 300px;
-    height: 450px;
-    padding: 12px;
+  background-color: #b3b3b3;
+  border-radius: 8px;
+  width: 300px;
+  padding: 12px;
 }
 
 .main__container #calc__visor {
-    background-color: #f1f1f1;
-    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.425);
-    font-size: 2.5rem;
-    height: 50px;
-    border-radius: 8px;
-    margin-bottom: 12px;
+  background-color: #f1f1f1;
+  box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.425);
+  font-size: 2.5rem;
+  height: 50px;
+  border-radius: 8px;
+  margin-bottom: 12px;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .main__container .calc__teclado {
-    height: 100%;
-    width: 100%;
+  width: 100%;
 
-    display: flex;
-    align-items: space-between;
-    justify-content: space-between;
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
 }
 
 .main__container .calc__teclado .tecla {
-    width: 65px;
-    height: 65px;
-    border: none;
+  width: 65px;
+  height: 65px;
+  border: none;
 
-    margin: 5px;
+  margin: 5px;
 
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .main__container .calc__teclado button.tecla:hover {
-    background-color: #dbdbdb;
-    box-shadow: 0px 0px 8px #fff;
-    transform: scale(1.1);
+  background-color: #dbdbdb;
+  box-shadow: 0px 0px 8px #fff;
+  transform: scale(1.1);
 }
 
 .main__container .calc__teclado .tecla::selection {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 footer {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
 
-    padding: 20px;
+  padding: 20px;
 
-    background-color: #fff;
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.404);
+  background-color: #fff;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.404);
 }
 
 footer .social-media {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 446px;
-    padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 446px;
+  padding: 10px 20px;
 
-    background-color: #f1f1f1;
-    border-radius: 8px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
 }
 
 footer .social-media .media {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 
-    padding: 10px 0px;
+  padding: 10px 0px;
 }
 
 footer .social-media .media:hover {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 footer .social-media .media .fa-brands {
-    padding-right: 10px;
+  padding-right: 10px;
 }
