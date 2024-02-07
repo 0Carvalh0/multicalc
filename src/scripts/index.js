@@ -14,15 +14,15 @@ function addValor(num) {
   let texto = document.querySelector("p#calc__visor").innerHTML;
 
   // Não colocar mais de 1 operação matemática ou ponto seguido
-  if (num === "+" || num === "-" || num === "/" || num === "*" || num === ".") {
+  // if (num === "+" || num === "-" || num === "/" || num === "*" || num === ".") {
+  // } else {
+  if (texto === "[ERRO]...") {
+    res.innerHTML = num;
   } else {
-    if (texto === "[ERRO]...") {
-      res.innerHTML = num;
-    } else {
-      res.innerHTML += num;
-    }
+    res.innerHTML += num;
   }
 }
+// }
 
 function limpar() {
   res.innerHTML = "";
