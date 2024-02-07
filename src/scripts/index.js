@@ -1,4 +1,14 @@
 const res = document.getElementById("calc__visor");
+const btnMenu = document.getElementById("btn__menuhamburguer");
+const listaMenu = document.getElementById("lista__menu");
+
+btnMenu.addEventListener("click", () => {
+  if (listaMenu.style.display === "none") {
+    listaMenu.style.display = "block";
+  } else {
+    listaMenu.style.display = "none";
+  }
+});
 
 function addValor(num) {
   let texto = document.querySelector("p#calc__visor").innerHTML;
