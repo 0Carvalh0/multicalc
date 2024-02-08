@@ -26,13 +26,11 @@ html {
   width: 100vw;
 }
 
-.header__menuhamburguer {
+.header__menuhamburguer span {
   position: absolute;
   left: 20px;
   top: 20px;
-}
 
-.header__menuhamburguer span {
   background-color: #fff;
   padding: 10px;
   border-radius: 50%;
@@ -40,6 +38,7 @@ html {
   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.404);
 
   font-size: 30px;
+  z-index: 10;
 }
 
 .header__menuhamburguer span:hover {
@@ -49,15 +48,19 @@ html {
 }
 
 .header__menuhamburguer ul {
-  display: block;
-  position: fixed;
+  position: absolute;
   left: 0;
-  margin-top: 10px;
+  top: 0;
+  background-color: var(--cor5);
+  padding-top: 80px;
+  height: calc(100vh - 80px);
+
+  z-index: 9;
+  transition: all ease 0.2s;
 }
 
 .header__menuhamburguer ul li {
   padding: 10px;
-  background-color: var(--cor5);
   border-bottom: 2px solid black;
   text-align: center;
 
@@ -193,7 +196,7 @@ footer .social-media .media:hover {
   transform: scale(1.1);
   text-decoration: underline;
   cursor: pointer;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 
 footer .social-media .media .fa-brands {

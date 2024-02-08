@@ -3,10 +3,10 @@ const btnMenu = document.getElementById("btn__menuhamburguer");
 const listaMenu = document.getElementById("lista__menu");
 
 btnMenu.addEventListener("click", () => {
-  if (listaMenu.style.display === "none") {
-    listaMenu.style.display = "block";
+  if (listaMenu.style.marginLeft < "0") {
+    listaMenu.style.marginLeft = "0";
   } else {
-    listaMenu.style.display = "none";
+    listaMenu.style.marginLeft = "-200px";
   }
 });
 
