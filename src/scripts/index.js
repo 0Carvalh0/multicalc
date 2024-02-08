@@ -5,8 +5,13 @@ const listaMenu = document.getElementById("lista__menu");
 btnMenu.addEventListener("click", () => {
   if (listaMenu.style.marginLeft < "0") {
     listaMenu.style.marginLeft = "0";
+
+    btnMenu.classList.remove("fa-bars");
+    btnMenu.classList.add("fa-xmark");
   } else {
     listaMenu.style.marginLeft = "-200px";
+    btnMenu.classList.remove("fa-xmark");
+    btnMenu.classList.add("fa-bars");
   }
 });
 
