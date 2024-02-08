@@ -54,6 +54,7 @@ html {
   background-color: var(--cor5);
   padding-top: 80px;
   height: calc(100vh - 80px);
+  margin-left: -200px;
 
   z-index: 9;
   transition: all ease 0.2s;
