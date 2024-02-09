@@ -32,7 +32,8 @@ html {
   left: 20px;
   top: 20px;
 
-  background-color: #fff;
+  background-color: var(--cor5);
+  color: #fff;
   padding: 10px;
   border-radius: 50%;
 
@@ -180,7 +181,7 @@ footer .social-media {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 446px;
+  width: 555px;
   padding: 10px 20px;
 
   background-color: #f1f1f1;
