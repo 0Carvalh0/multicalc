@@ -19,7 +19,8 @@ html {
   flex-direction: column;
 
   font-family: var(--font-default);
-  background: var(--cor5) linear-gradient(145deg, #287399, #133647);
+  background: var(--cor5) linear-gradient(145deg, #287399, #133647) no-repeat;
+  background-size: cover;
 }
 
 .header {
@@ -162,7 +163,7 @@ html {
 
 footer {
   display: flex;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
@@ -202,4 +203,44 @@ footer .social-media .media:hover {
 
 footer .social-media .media .fa-brands {
   padding-right: 10px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 500px) {
+  .header__menuhamburguer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__menuhamburguer span {
+    position: relative;
+    left: 0;
+    top: 0;
+    border-radius: 0;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+    padding: 10px 0px;
+  }
+
+  .header__menuhamburguer span:hover {
+    transform: scale(1);
+  }
+
+  .header__menuhamburguer ul {
+    padding-top: 55px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer .social-media {
+    margin-top: 20px;
+    align-items: center;
+    width: 90%;
+  }
 }
