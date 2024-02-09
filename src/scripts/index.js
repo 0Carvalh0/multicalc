@@ -7,7 +7,7 @@ btnMenu.addEventListener("click", () => {
     listaMenu.style.marginLeft = "0";
     btnMenu.style.backgroundColor = "#fff";
     btnMenu.style.color = "var(--cor5)";
-    
+
     btnMenu.classList.remove("fa-bars");
     btnMenu.classList.add("fa-xmark");
   } else {
@@ -23,16 +23,22 @@ btnMenu.addEventListener("click", () => {
 function addValor(num) {
   let texto = document.querySelector("p#calc__visor").innerHTML;
 
-  // Não colocar mais de 1 operação matemática ou ponto seguido
-  // if (num === "+" || num === "-" || num === "/" || num === "*" || num === ".") {
-  // } else {
   if (texto === "[ERRO]...") {
     res.innerHTML = num;
   } else {
-    res.innerHTML += num;
+    let regex = /[\+\-\*\/\.]$/;
+
+    if (regex.test(num)) {
+      if (regex.test(texto.slice(-1))) {
+        return;
+      } else {
+        res.innerHTML += num;
+      }
+    } else {
+      res.innerHTML += num;
+    }
   }
 }
-// }
 
 function limpar() {
   res.innerHTML = "";
