@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../images/icons/calculadora.ico"
+      type="image/x-icon"
+    />
+    <title>CalculaJão</title>
+
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/model.css" />
+    <link rel="stylesheet" href="../styles/imc.css">
+    <script
+      src="https://kit.fontawesome.com/9bfb2428d0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <aside class="header__menuhamburguer">
+        <span class="fa-solid fa-bars" id="btn__menuhamburguer"></span>
+
+        <ul id="lista__menu">
+          <li><a href="./src/pages/imc.html">IMC</a></li>
+          <li><a href="./src/pages/imc.html">Média Aritmética</a></li>
+          <li><a href="./src/pages/imc.html">Pitágoras</a></li>
+        </ul>
+      </aside>
+
+      <div class="header__title">
+        <h1 class="text title">Bem-vindo ao CalculaJão - IMC</h1>
+        <h2 class="text subtitle">A melhor calculadora de IMC da terra</h2>
+      </div>
+    </header>
+
+    <main>
+      <form method="get">
+        <div>
+          <label for="peso">Peso:</label>
+          <input type="number" name="peso" id="form__peso" required placeholder="Digite seu peso...">
+        </div>
+        <div>
+          <label for="altura">Altura:</label>
+          <input type="number" name="altura" id="form__altura" required placeholder="Digite sua altura...">
+        </div>
+        <input type="submit" value="Calcular">
+        <div id="res"></div>
+      </form>
+    </main>
+
+    <script src="../scripts/imc.js"></script>
+    <script src="../scripts/sidebar.js"></script>
+  </body>
+</html>
