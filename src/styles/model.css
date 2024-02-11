@@ -51,12 +51,12 @@ html {
 
 .header__menuhamburguer ul {
   position: absolute;
-  left: 0;
+  left: -210px;
   top: 0;
+
   background-color: var(--cor5);
   padding-top: 80px;
   height: calc(100vh - 80px);
-  margin-left: -200px;
 
   z-index: 9;
   transition: all ease 0.2s;
@@ -66,6 +66,8 @@ html {
   padding: 10px;
   border-bottom: 2px solid black;
   text-align: center;
+  font-weight: 500;
+  font-size: 1.3rem;
 
   cursor: pointer;
 }
@@ -75,11 +77,9 @@ html {
   background-color: var(--cor4);
 }
 
-.header__menuhamburguer ul li a {
+.header__menuhamburguer ul a {
   text-decoration: none;
   color: #fff;
-  font-weight: 500;
-  font-size: 1.3rem;
 }
 
 .header__title {
