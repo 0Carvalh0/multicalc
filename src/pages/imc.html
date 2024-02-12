@@ -46,9 +46,10 @@
             <input
               type="number"
               name="peso"
-              id="form__peso"
+              id="iform__peso"
               required
               placeholder="Digite seu peso..."
+              maxlength="5"
             />
           </div>
           <div>
@@ -56,15 +57,55 @@
             <input
               type="number"
               name="altura"
-              id="form__altura"
+              id="iform__altura"
               required
               placeholder="Digite sua altura..."
+              maxlength="3"
             />
           </div>
         </div>
 
         <input type="submit" id="calc__botao" value="Calcular" />
         <div id="res"></div>
+        <table>
+          <thead>
+            <tr id="linha__Titulo">
+              <th scope="col" colspan="3" id="table__Titulo">VEJA O SEU IMC</th>
+            </tr>
+            <tr>
+              <th scope="col" class="table__col-Titulo">IMC</th>
+              <th scope="col" class="table__col-Titulo">CLASSIFICAÇÃO</th>
+              <th scope="col" class="table__col-Titulo">OBESIDADE (GRAU)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="linha1">
+              <td>MENOR QUE 18,5</td>
+              <td>MAGREZA</td>
+              <td>0</td>
+            </tr>
+            <tr id="linha2">
+              <td>ENTRE 18,5 E 24,9</td>
+              <td>NORMAL</td>
+              <td>0</td>
+            </tr>
+            <tr id="linha3">
+              <td>ENTRE 25,0 E 29,9</td>
+              <td>SOBREPESO</td>
+              <td>I</td>
+            </tr>
+            <tr id="linha4">
+              <td>ENTRE 30,0 E 39,9</td>
+              <td>OBESIDADE</td>
+              <td>II</td>
+            </tr>
+            <tr id="linha5">
+              <td>MAIOR QUE 40,0</td>
+              <td>OBESIDADE GRAVE</td>
+              <td>III</td>
+            </tr>
+          </tbody>
+        </table>
       </form>
     </main>
 
