@@ -19,7 +19,8 @@ function imc() {
   if (peso == 0 || altura == 0) {
     window.alert(`[ERRO! Digite um peso e uma altura!]`);
   } else {
-    res.innerHTML = `SEU IMC É:<br>${imcres.toFixed(2)}`;
+    res.innerHTML = `SEU IMC É:<br>${imcres.toFixed(2).replace(".", ",")}`;
+    res.style.opacity = 1;
     if (imcres < 18.5) {
       linha1.style.backgroundColor = "#b6e7ff";
     } else if (imcres >= 18.5 && imcres < 24.9) {
