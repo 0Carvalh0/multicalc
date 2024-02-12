@@ -41,25 +41,28 @@
     <main>
       <form method="get">
         <div>
-          <label for="peso">Peso:</label>
-          <input
-            type="number"
-            name="peso"
-            id="form__peso"
-            required
-            placeholder="Digite seu peso..."
-          />
+          <div>
+            <label for="peso">Peso:</label>
+            <input
+              type="number"
+              name="peso"
+              id="form__peso"
+              required
+              placeholder="Digite seu peso..."
+            />
+          </div>
+          <div>
+            <label for="altura">Altura:</label>
+            <input
+              type="number"
+              name="altura"
+              id="form__altura"
+              required
+              placeholder="Digite sua altura..."
+            />
+          </div>
         </div>
-        <div>
-          <label for="altura">Altura:</label>
-          <input
-            type="number"
-            name="altura"
-            id="form__altura"
-            required
-            placeholder="Digite sua altura..."
-          />
-        </div>
+
         <input type="submit" id="calc__botao" value="Calcular" />
         <div id="res"></div>
       </form>

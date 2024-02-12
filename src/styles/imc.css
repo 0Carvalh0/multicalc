@@ -12,20 +12,25 @@ main form {
   padding: 20px;
 }
 
-main form div {
+main form > div {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  margin: 10px 0px;
+  width: 100%;
 }
 
-main form #form__peso, #form__altura {
+main form div:first-child {
+  margin-right: 20px;
+}
+
+main form div > div {
+  width: 50%;
+}
+
+main form #form__peso,
+#form__altura {
   border: 2px solid var(--cor4);
   background-color: #fff;
   border-radius: 8px;
   padding: 6px;
-  margin-left: 10px;
 
   width: 100%;
 }
@@ -33,10 +38,10 @@ main form #form__peso, #form__altura {
 main form #calc__botao {
   align-self: center;
   width: max-content;
-  
+
   border-radius: 50px;
   margin-top: 10px;
-  
+
   background-color: var(--cor3);
   padding: 8px 20px;
   color: #fff;
@@ -49,6 +54,6 @@ main form #calc__botao:hover {
   background-color: var(--cor1);
   box-shadow: 0px 0px 5px black;
   color: var(--cor5);
-  
-  transition: all ease .2s;
+
+  transition: all ease 0.2s;
 }
