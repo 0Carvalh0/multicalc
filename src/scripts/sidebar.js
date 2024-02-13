@@ -1,9 +1,16 @@
 const btnMenu = document.getElementById("btn__menuhamburguer");
 const listaMenu = document.getElementById("lista__menu");
-
 const relogio = document.querySelector("#relogio");
-let horas = new Date().getHours();
-let minutos = new Date().getMinutes();
+
+const trocarHora = setInterval(function time() {
+  let horas = new Date().getHours();
+  let minutos = new Date().getMinutes();
+
+  if (horas < 10) {horas = "0" + horas};
+  if (minutos < 10) {minutos = "0" + minutos};
+
+  relogio.innerHTML = `${horas}:${minutos}`;
+});
 
 btnMenu.addEventListener("click", () => {
   if (listaMenu.style.left < "0") {
@@ -22,5 +29,3 @@ btnMenu.addEventListener("click", () => {
     btnMenu.classList.add("fa-bars");
   }
 });
-
-relogio.innerHTML = `${horas}:${minutos}`
