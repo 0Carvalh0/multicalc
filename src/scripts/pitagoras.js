@@ -8,7 +8,7 @@ function pitagoras() {
   if (a == 0 || b == 0) {
     window.alert(`[ERRO] Digite um peso e uma altura!`);
   } else {
-    res.innerHTML = `Hipotenusa: ${pitagoras.toFixed(2)}`;
+    res.innerHTML = `Hipotenusa: ${pitagoras.toFixed(2).replace('.', ',')}`;
     res.style.opacity = 1;
   }
 }

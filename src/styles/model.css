@@ -54,6 +54,10 @@ html {
   left: -210px;
   top: 0;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   background-color: var(--cor5);
   padding-top: 80px;
   height: calc(100vh - 80px);
@@ -80,6 +84,19 @@ html {
 .header__menuhamburguer ul a {
   text-decoration: none;
   color: #fff;
+}
+
+.header__menuhamburguer ul div#relogio {
+  color: #fff;
+  background-color: var(--cor3);
+  width: max-content;
+  align-self: center;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 3px solid #fff;
+  box-shadow: -2px 2px 5px #000;
+  font-size: 1.5rem;
 }
 
 .header__title {

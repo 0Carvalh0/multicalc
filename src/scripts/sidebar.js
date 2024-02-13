@@ -1,6 +1,10 @@
 const btnMenu = document.getElementById("btn__menuhamburguer");
 const listaMenu = document.getElementById("lista__menu");
 
+const relogio = document.querySelector("#relogio");
+let horas = new Date().getHours();
+let minutos = new Date().getMinutes();
+
 btnMenu.addEventListener("click", () => {
   if (listaMenu.style.left < "0") {
     listaMenu.style.left = "0";
@@ -18,3 +22,5 @@ btnMenu.addEventListener("click", () => {
     btnMenu.classList.add("fa-bars");
   }
 });
+
+relogio.innerHTML = `${horas}:${minutos}`
