@@ -17,7 +17,7 @@ function imc() {
   linha5.style.backgroundColor = "transparent";
 
   if (peso == 0 || altura == 0) {
-    window.alert(`[ERRO! Digite um peso e uma altura!]`);
+    window.alert(`[ERRO] Digite um peso e uma altura!`);
   } else {
     res.innerHTML = `SEU IMC É:<br>${imcres.toFixed(2).replace(".", ",")}`;
     res.style.opacity = 1;
