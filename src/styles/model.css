@@ -152,7 +152,7 @@ footer .social-media .media .fa-brands {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 570px) {
   .header__menuhamburguer {
     display: flex;
     justify-content: center;

@@ -1,0 +1,81 @@
+main {
+  width: 500px;
+
+  background-color: #dbdbdb;
+  border-radius: 30px;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+}
+
+main form > div {
+  display: flex;
+  width: 100%;
+}
+
+main form div:first-child {
+  margin-right: 20px;
+}
+
+main form div > div {
+  width: 50%;
+}
+
+main form #iform__cateto1,
+#iform__cateto2 {
+  border: 2px solid var(--cor4);
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 6px;
+
+  width: 100%;
+}
+
+main form #calc__botao {
+  align-self: center;
+  width: max-content;
+
+  border-radius: 50px;
+  margin-top: 10px;
+
+  background-color: var(--cor3);
+  padding: 8px 20px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+main form #calc__botao:hover {
+  transform: scale(1.05);
+  background-color: var(--cor1);
+  box-shadow: 0px 0px 5px black;
+  color: var(--cor5);
+
+  transition: all ease 0.2s;
+}
+
+main form #res {
+  opacity: 0;
+  margin-top: 10px;
+
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+
+  background-color: var(--cor1);
+  color: #fff;
+  text-shadow: -2px 2px var(--cor5);
+  border-radius: 8px;
+  border: 2px solid #fff;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.507);
+  padding: 10px;
+  width: 150px;
+
+  font-size: 1.3rem;
+  font-weight: 600;
+}
