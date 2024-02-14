@@ -4,14 +4,16 @@ function addValor(num) {
   let texto = document.querySelector("p#calc__visor").innerHTML;
 
   if (texto === "") {
-    res.innerHTML = num;
+    let regex = /[\+\-\*\/\.]$/;
+    
+    if (!regex.test(num)) {
+      res.innerHTML = num;
+    }
   } else {
     let regex = /[\+\-\*\/\.]$/;
 
     if (regex.test(num)) {
-      if (regex.test(texto.slice(-1))) {
-        return;
-      } else {
+      if (!regex.test(texto.slice(-1))) {
         res.innerHTML += num;
       }
     } else {
@@ -20,6 +22,7 @@ function addValor(num) {
       let ultima = partes[partes.length - 1];
 
       if (ultima.includes(".")) {
+        res.innerHTML += num;
       } else {
         res.innerHTML += num;
       }
