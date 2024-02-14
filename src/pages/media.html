@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../images/icons/calculadora.ico"
+      type="image/x-icon"
+    />
+    <title>CalculaJão</title>
+
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/model.css" />
+    <link rel="stylesheet" href="../styles/media.css" />
+    <script
+      src="https://kit.fontawesome.com/9bfb2428d0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <aside class="header__menuhamburguer">
+        <span class="fa-solid fa-bars" id="btn__menuhamburguer"></span>
+
+        <ul id="lista__menu">
+          <div>
+            <a href="../../index.html"><li>Calculadora Simples</li></a>
+            <a href="./imc.html"><li>IMC</li></a>
+            <a href="./media.html"><li>Média Aritmética</li></a>
+            <a href="./pitagoras.html"><li>Pitágoras</li></a>
+          </div>
+          <div id="relogio">00:00</div>
+        </ul>
+      </aside>
+
+      <div class="header__title">
+        <h1 class="text title">Bem-vindo ao CalculaJão - Média Aritmética</h1>
+        <h2 class="text subtitle">A melhor calculadora de Média Aritmética da terra</h2>
+      </div>
+    </header>
+
+    <main>
+      <form method="get">
+        <div>
+          <div>
+            <label for="peso">Números:</label>
+            <input
+              type="number"
+              name="numero"
+              id="iform__numero"
+              required
+              placeholder="Digite um valor para fazer a média..."
+            />
+          </div>
+        </div>
+
+        <input type="button" onclick="add()" id="adicionar__botao" value="Adicionar" />
+        <input type="button" onclick="media()" id="calc__botao" value="Calcular" />
+
+        <div id="res"></div>
+
+      </form>
+      <ul id="tabeladeValores">
+        <li>Valor 1</li>
+        <li>Valor 2</li>
+        <li>Valor 3</li>
+        <li>Valor 4</li>
+        <li>Valor 5</li>
+      </ul>
+    </main>
+
+    <script src="../scripts/media.js"></script>
+    <script src="../scripts/sidebar.js"></script>
+  </body>
+</html>
