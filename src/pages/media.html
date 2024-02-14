@@ -37,7 +37,9 @@
 
       <div class="header__title">
         <h1 class="text title">Bem-vindo ao CalculaJão - Média Aritmética</h1>
-        <h2 class="text subtitle">A melhor calculadora de Média Aritmética da terra</h2>
+        <h2 class="text subtitle">
+          A melhor calculadora de Média Aritmética da terra
+        </h2>
       </div>
     </header>
 
@@ -56,18 +58,31 @@
           </div>
         </div>
 
-        <input type="button" onclick="add()" id="adicionar__botao" value="Adicionar" />
-        <input type="button" onclick="media()" id="calc__botao" value="Calcular" />
+        <div id="container__botoes">
+          <input
+            type="button"
+            onclick="add()"
+            id="adicionar__botao"
+            value="Adicionar"
+          />
+          <input
+            type="button"
+            onclick="remove()"
+            id="remover__botao"
+            value="Eliminar"
+          />
+          <input
+            type="button"
+            onclick="media()"
+            id="calc__botao"
+            value="Calcular"
+          />
+        </div>
 
         <div id="res"></div>
-
       </form>
       <ul id="tabeladeValores">
         <li>Valor 1</li>
-        <li>Valor 2</li>
-        <li>Valor 3</li>
-        <li>Valor 4</li>
-        <li>Valor 5</li>
       </ul>
     </main>
 
