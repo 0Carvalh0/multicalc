@@ -91,19 +91,29 @@ main form #res {
   font-weight: 600;
 }
 
+main h2 {
+  background-color: var(--cor4);
+  color: #fff;
+
+  text-align: start;
+
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+
 main #tabeladeValores {
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   margin-top: 10px;
+  border-top: 1px solid var(--cor1);
 
-  border: 3px solid var(--cor5);
-  background-color: var(--cor1);
   font-weight: 600;
 }
 
 main #tabeladeValores li {
   text-align: center;
-  border-bottom: 1px solid black;
+  padding: 6px 0px;
+  border-bottom: 1px solid var(--cor1);
 }

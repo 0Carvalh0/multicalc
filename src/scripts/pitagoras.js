@@ -6,9 +6,9 @@ function pitagoras() {
   let pitagoras = Math.sqrt(a ** 2 + b ** 2);
 
   if (a == 0 || b == 0) {
-    window.alert(`[ERRO] Digite um peso e uma altura!`);
+    window.alert(`[ERRO] Digite o valor dos dois catetos!`);
   } else {
-    res.innerHTML = `Hipotenusa: ${pitagoras.toFixed(2).replace('.', ',')}`;
+    res.innerHTML = `Hipotenusa: ${pitagoras.toFixed(2).replace(".", ",")}`;
     res.style.opacity = 1;
   }
 }
