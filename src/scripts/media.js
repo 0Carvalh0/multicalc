@@ -9,12 +9,24 @@ let listaMedia = [];
 // FUNÇÕES
 
 function add() {
-  listaMedia.push(formNumero.value);
-  formNumero.innerHTML = "";
+  const li = document.createElement("li");
+
+  if (formNumero.value === "") {
+    window.alert("[ERRO] Digite um valor para adicionar a média!");
+  } else {
+    listaMedia.push(formNumero.value);
+    li.innerHTML = `${formNumero.value} Adicionado`;
+    formNumero.value = "";
+
+    tabelaValores.appendChild(li);
+  }
 }
 
 function remove() {
-  listaMedia.remove();
+  listaMedia.pop();
+  tabelaValores.removeChild(tabelaValores.lastChild);
+
+  formNumero.value = "";
 }
 
 function media() {
