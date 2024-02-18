@@ -18,6 +18,10 @@ function add() {
     li.innerHTML = `${formNumero.value} Adicionado`;
     formNumero.value = "";
 
+    if (res.style.display === "flex") {
+      res.style.display = "none";
+    }
+
     tabelaValores.appendChild(li);
   }
 }
@@ -26,9 +30,21 @@ function remove() {
   listaMedia.pop();
   tabelaValores.removeChild(tabelaValores.lastChild);
 
+  if (res.style.display === "flex") {
+    res.style.display = "none";
+  }
+
   formNumero.value = "";
 }
 
 function media() {
-  window.alert(listaMedia);
+  let media = 0;
+
+  for (let i = 0; i < listaMedia.length; i++) {
+    media += Number(listaMedia[i]);
+  }
+  media = media / listaMedia.length;
+
+  res.innerHTML = media.toFixed(2);
+  res.style.display = "flex";
 }
