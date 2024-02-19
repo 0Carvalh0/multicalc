@@ -51,7 +51,7 @@ html {
 
 .header__menuhamburguer ul {
   position: absolute;
-  left: -210px;
+  left: -500px;
   top: 0;
 
   display: flex;

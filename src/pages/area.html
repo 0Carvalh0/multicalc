@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/model.css" />
-    <link rel="stylesheet" href="../styles/pitagoras.css" />
+    <link rel="stylesheet" href="../styles/area.css" />
     <script
       src="https://kit.fontawesome.com/9bfb2428d0.js"
       crossorigin="anonymous"
@@ -37,50 +37,12 @@
       </aside>
 
       <div class="header__title">
-        <h1 class="text title">Bem-vindo ao CalculaJão - Pitágoras</h1>
-        <h2 class="text subtitle">
-          A melhor calculadora de teorema de Pitágoras da terra
-        </h2>
+        <h1 class="text title">Bem-vindo ao CalculaJão - IMC</h1>
+        <h2 class="text subtitle">A melhor calculadora de IMC da terra</h2>
       </div>
     </header>
 
-    <main>
-      <form method="get">
-        <div>
-          <div>
-            <label for="cateto1">Cateto 1:</label>
-            <input
-              type="number"
-              name="cateto1"
-              id="iform__cateto1"
-              required
-              placeholder="Digite um dos catetos..."
-            />
-          </div>
-          <div>
-            <label for="altura">Cateto 2:</label>
-            <input
-              type="number"
-              name="cateto2"
-              id="iform__cateto2"
-              required
-              placeholder="Digite o outro cateto..."
-            />
-          </div>
-        </div>
-
-        <input
-          type="button"
-          onclick="pitagoras()"
-          id="calc__botao"
-          value="Calcular"
-        />
-
-        <div id="res"></div>
-      </form>
-    </main>
-
-    <script src="../scripts/pitagoras.js"></script>
+    <script src="../scripts/area.js"></script>
     <script src="../scripts/sidebar.js"></script>
   </body>
 </html>

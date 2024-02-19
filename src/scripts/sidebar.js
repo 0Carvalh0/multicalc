@@ -6,8 +6,12 @@ const trocarHora = setInterval(function time() {
   let horas = new Date().getHours();
   let minutos = new Date().getMinutes();
 
-  if (horas < 10) {horas = "0" + horas};
-  if (minutos < 10) {minutos = "0" + minutos};
+  if (horas < 10) {
+    horas = "0" + horas;
+  }
+  if (minutos < 10) {
+    minutos = "0" + minutos;
+  }
 
   relogio.innerHTML = `${horas}:${minutos}`;
 });
@@ -21,7 +25,7 @@ btnMenu.addEventListener("click", () => {
     btnMenu.classList.remove("fa-bars");
     btnMenu.classList.add("fa-xmark");
   } else {
-    listaMenu.style.left = "-210px";
+    listaMenu.style.left = "-500px";
     btnMenu.style.backgroundColor = "var(--cor5)";
     btnMenu.style.color = "#fff";
 
