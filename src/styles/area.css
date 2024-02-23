@@ -1,0 +1,16 @@
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main__Botoes {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#main__Iframe {
+    width: 100vw;
+    height: 100%;
+}
