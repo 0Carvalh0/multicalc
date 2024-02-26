@@ -29,7 +29,7 @@ main form div > div {
 }
 
 main form #iform__base,
-#iform__altura {
+#iform__altura, #iform__raio {
   border: 2px solid var(--cor4);
   background-color: #fff;
   border-radius: 8px;

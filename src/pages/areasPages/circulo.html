@@ -4,13 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Circulo Area</title>
+    <link rel="stylesheet" href="../../styles/model.css" />
     <link rel="stylesheet" href="../../styles/areasPages.css" />
   </head>
   <body>
     <main>
-      <h1>Olá Mundo Circulo</h1>
+      <section class="container__Calculo">
+        <form method="get">
+            <div>
+              <label for="raio">Raio:</label>
+              <input
+                type="number"
+                name="raio"
+                id="iform__raio"
+                required
+                placeholder="Digite a raio do seu circulo..."
+              />
+            </div>
+
+          <input
+            type="button"
+            onclick="circulo()"
+            id="calc__botao"
+            value="Calcular"
+          />
+
+          <div id="res"></div>
+        </form>
+      </section>
     </main>
 
-    <script src="../scripts/area.js"></script>
+    <script src="../../scripts/areasScripts/circulo.js"></script>
   </body>
 </html>
