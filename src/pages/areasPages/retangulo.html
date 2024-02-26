@@ -4,11 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Retângulo Area</title>
+    <link rel="stylesheet" href="../../styles/model.css" />
     <link rel="stylesheet" href="../../styles/areasPages.css" />
   </head>
   <body>
     <main>
-      <section class="container__Calculo">Olá MUndo!</section>
+      <section class="container__Calculo">
+        <form method="get">
+          <div>
+            <div>
+              <label for="base">Base:</label>
+              <input
+                type="number"
+                name="base"
+                id="iform__base"
+                required
+                placeholder="Digite a base do seu retângulo..."
+              />
+            </div>
+            <div>
+              <label for="altura">Altura:</label>
+              <input
+                type="number"
+                name="altura"
+                id="iform__altura"
+                required
+                placeholder="Digite a altura do seu retângulo..."
+              />
+            </div>
+          </div>
+
+          <input
+            type="button"
+            onclick="pitagoras()"
+            id="calc__botao"
+            value="Calcular"
+          />
+
+          <div id="res"></div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
