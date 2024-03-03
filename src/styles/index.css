@@ -36,14 +36,14 @@
 
   font-weight: 500;
   font-size: 1.5em;
+  background-color: transparent;
 }
 
 .main__container .calc__teclado button.tecla {
-  background-color: #dadada;
+  box-shadow: -6px -6px 8px #ffffff9f;
 }
 
 .main__container .calc__teclado button.tecla:hover {
-  background-color: #fff;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
   font-weight: 600;
   transform: scale(1.1);
