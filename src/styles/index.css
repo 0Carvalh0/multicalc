@@ -1,7 +1,14 @@
 .main__container {
   background-image: linear-gradient(75deg, #111, #444);
-  padding: 20px;
   border-radius: 50px;
+  padding: 10px 10px 0px 10px;
+  width: fit-content;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
   scale: 0.8;
 }
 
@@ -9,8 +16,9 @@
   font-family: Calculadora;
   color: #fff;
   margin: 20px 0px;
-  height: 100px;
   font-weight: 500;
+  height: 100px;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -20,7 +28,6 @@
 
 .main__container #calc__visor p {
   font-size: 4rem;
-  line-height: 25px;
 }
 
 .main__container #calc__visor p#calc__visor-anterior {
@@ -56,7 +63,16 @@
 }
 
 .main__container .calc__teclado .igual {
-  height: 200px;
+  font-family: Calculadora;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+
+  border-radius: 30px;
+  border: 5px groove #fff #222;
+  color: white;
+  margin: 5px;
+  cursor: pointer;
 }
 
 .main__container .calc__teclado .tecla:hover {
