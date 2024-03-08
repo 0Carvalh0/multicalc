@@ -7,18 +7,20 @@
 
 .main__container #calc__visor {
   font-family: Calculadora;
-  color: #00ff00;
+  color: #fff;
   margin: 20px 0px;
   height: 100px;
+  font-weight: 500;
 
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
 
 .main__container #calc__visor p {
   font-size: 4rem;
+  line-height: 25px;
 }
 
 .main__container #calc__visor p#calc__visor-anterior {
@@ -31,6 +33,10 @@
 }
 
 .main__container .calc__teclado .tecla {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-family: Calculadora;
   font-size: 3rem;
   font-weight: 500;
@@ -45,13 +51,24 @@
   height: 100px;
 }
 
+.main__container .calc__teclado .operador {
+  background-image: linear-gradient(75deg, #008cff, #006dc7, #008cff);
+}
+
+.main__container .calc__teclado .igual {
+  height: 200px;
+}
+
 .main__container .calc__teclado .tecla:hover {
   background-image: linear-gradient(75deg, #555, #222, #555);
-  transition-duration: 3s;
+}
+
+.main__container .calc__teclado .operador:hover {
+  background-image: linear-gradient(75deg, #249dff, #008cff, #249dff);
 }
 
 .main__container .calc__teclado .tecla .fa-solid {
-  font-size: 2rem;
+  font-size: 2.8rem;
 }
 
 .main__container .calc__teclado .tecla::selection {

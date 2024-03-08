@@ -16,13 +16,7 @@
 
 body,
 html {
-  width: 100vw;
-  height: 100vh;
   box-sizing: border-box;
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 
   font-family: var(--font-default);
   background: var(--cor5) linear-gradient(145deg, #287399, #133647) no-repeat;
@@ -38,9 +32,16 @@ html {
   left: 20px;
   top: 20px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 50px;
+
   background-color: var(--cor5);
   color: #fff;
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: 50%;
 
   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.404);
@@ -131,11 +132,10 @@ html {
 }
 
 footer {
-  display: flex;
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+
+  display: flex;
   justify-content: space-between;
   align-items: center;
 
@@ -150,10 +150,10 @@ footer .social-media {
   flex-direction: column;
   align-items: flex-end;
   width: 555px;
-  padding: 10px 20px;
+  padding-right: 20px;
 
   background-color: #f1f1f1;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 footer .social-media .media {
@@ -165,6 +165,7 @@ footer .social-media .media {
 
 footer .social-media .media:hover {
   transform: scale(1.1);
+  color: #555;
   text-decoration: underline;
   cursor: pointer;
   transition-duration: 0.3s;
@@ -183,7 +184,7 @@ footer .social-media .media .fa-brands {
   }
 
   .header__menuhamburguer span {
-    position: relative;
+    position: absolute;
     left: 0;
     top: 0;
     border-radius: 0;
@@ -201,6 +202,10 @@ footer .social-media .media .fa-brands {
 
   .header__menuhamburguer ul {
     padding-top: 55px;
+  }
+
+  .header__title {
+    margin-top: 50px;
   }
 
   footer {

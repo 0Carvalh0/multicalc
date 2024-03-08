@@ -45,25 +45,25 @@
     <main>
       <div class="main__container">
         <section id="calc__visor">
-          <p id="calc__visor-anterior">OLA</p>
+          <p id="calc__visor-anterior"></p>
           <p id="calc__visor-atual"></p>
         </section>
 
         <table class="calc__teclado">
           <tr>
             <td>
-              <button class="tecla" onclick="limpar()">C</button>
+              <button class="tecla operador" onclick="limpar()">C</button>
             </td>
             <td>
-              <button class="tecla" onclick="deletar()">
+              <button class="tecla operador" onclick="deletar()">
                 <i class="fa-solid fa-delete-left"></i>
               </button>
             </td>
             <td>
-              <button class="tecla" onclick="addValor('+')">+</button>
+              <button class="tecla operador" onclick="addValor('+')">+</button>
             </td>
             <td>
-              <button class="tecla" onclick="addValor('-')">-</button>
+              <button class="tecla operador" onclick="addValor('-')">-</button>
             </td>
           </tr>
           <tr>
@@ -77,7 +77,7 @@
               <button class="tecla" onclick="addValor('9')">9</button>
             </td>
             <td>
-              <button class="tecla" onclick="addValor('*')">x</button>
+              <button class="tecla operador" onclick="addValor('*')">X</button>
             </td>
           </tr>
           <tr>
@@ -91,25 +91,27 @@
               <button class="tecla" onclick="addValor('6')">6</button>
             </td>
             <td>
-              <button class="tecla" onclick="addValor('/')">÷</button>
+              <button class="tecla operador" onclick="addValor('/')">÷</button>
             </td>
           </tr>
           <tr>
-            <td>
+            <td style="transform: translateY(-50px)">
               <button class="tecla" onclick="addValor('1')">1</button>
             </td>
-            <td>
+            <td style="transform: translateY(-50px)">
               <button class="tecla" onclick="addValor('2')">2</button>
             </td>
-            <td>
+            <td style="transform: translateY(-50px)">
               <button class="tecla" onclick="addValor('3')">3</button>
             </td>
-            <td rowspan="2" style="height: calc(100px * 2)">
-              <button class="tecla" onclick="calcular()">=</button>
+            <td rowspan="2">
+              <button class="tecla operador igual" onclick="calcular()">
+                =
+              </button>
             </td>
           </tr>
           <tr>
-            <td colspan="2">
+            <td colspan="2" style="transform: translateY(-50px)">
               <button
                 class="tecla"
                 onclick="addValor('0')"
@@ -118,7 +120,7 @@
                 0
               </button>
             </td>
-            <td>
+            <td style="transform: translateY(-50px)">
               <button class="tecla" onclick="addValor('.')">,</button>
             </td>
           </tr>
@@ -134,7 +136,7 @@
         redes sociais:
       </p>
       <div class="social-media">
-        <a href="#" class="media"
+        <a href="https://github.com/0Carvalh0" class="media"
           ><span class="fa-brands fa-github"></span><span>GitHub</span></a
         >
         <a href="#" class="media"
