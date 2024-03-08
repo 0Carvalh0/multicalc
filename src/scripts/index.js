@@ -1,11 +1,11 @@
-const res = document.getElementById("calc__visor");
+const res = document.getElementById("calc__visor-atual");
 
 function addValor(num) {
-  let texto = document.querySelector("p#calc__visor").innerHTML;
+  let texto = document.querySelector("p#calc__visor-atual").innerHTML;
 
   if (texto === "") {
     let regex = /[\+\-\*\/\.]$/;
-    
+
     if (!regex.test(num)) {
       res.innerHTML = num;
     }
@@ -32,16 +32,18 @@ function addValor(num) {
 
 function limpar() {
   res.innerHTML = "";
+  document.getElementById("calc__visor-anterior").innerHTML = "";
 }
 
 function deletar() {
-  let texto = document.querySelector("p#calc__visor").innerHTML;
+  let texto = document.querySelector("p#calc__visor-atual").innerHTML;
   res.innerHTML = texto.substring(0, texto.length - 1);
 }
 
 function calcular() {
-  let texto = document.querySelector("p#calc__visor").innerHTML;
+  let texto = document.querySelector("p#calc__visor-atual").innerHTML;
   if (texto) {
+    document.getElementById("calc__visor-anterior").innerHTML = texto;
     res.innerHTML = eval(texto);
   } else {
     window.alert(

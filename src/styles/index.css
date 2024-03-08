@@ -1,53 +1,57 @@
 .main__container {
-  background-color: #b3b3b3;
-  border: 5px outset rgb(24, 24, 24);
-  border-radius: 8px;
-  width: 300px;
-  padding: 12px;
+  background-image: linear-gradient(75deg, #111, #444);
+  padding: 20px;
+  border-radius: 50px;
+  scale: 0.8;
 }
 
 .main__container #calc__visor {
-  background-color: #f1f1f1;
-  border: 5px outset gray;
-  font-size: 2.5rem;
-  height: 50px;
-  margin-bottom: 12px;
-  padding-right: 5px;
+  font-family: Calculadora;
+  color: #00ff00;
+  margin: 20px 0px;
+  height: 100px;
 
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   justify-content: flex-end;
+}
+
+.main__container #calc__visor p {
+  font-size: 4rem;
+}
+
+.main__container #calc__visor p#calc__visor-anterior {
+  font-size: 3rem;
+  opacity: 0.6;
 }
 
 .main__container .calc__teclado {
   width: 100%;
-
-  display: flex;
-  align-items: space-between;
-  justify-content: space-between;
 }
 
 .main__container .calc__teclado .tecla {
-  width: 65px;
-  height: 65px;
-  border: none;
-
-  margin: 5px;
-
+  font-family: Calculadora;
+  font-size: 3rem;
   font-weight: 500;
-  font-size: 1.5em;
-  background-color: transparent;
+  border-radius: 30px;
+  border: 5px groove #fff #222;
+  background-image: linear-gradient(75deg, #444, #111, #444);
+  color: white;
+  margin: 5px;
+  cursor: pointer;
+
+  width: 100px;
+  height: 100px;
 }
 
-.main__container .calc__teclado button.tecla {
-  box-shadow: -6px -6px 8px #ffffff9f;
+.main__container .calc__teclado .tecla:hover {
+  background-image: linear-gradient(75deg, #555, #222, #555);
+  transition-duration: 3s;
 }
 
-.main__container .calc__teclado button.tecla:hover {
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-  font-weight: 600;
-  transform: scale(1.1);
-  transition-duration: 0.1s;
+.main__container .calc__teclado .tecla .fa-solid {
+  font-size: 2rem;
 }
 
 .main__container .calc__teclado .tecla::selection {

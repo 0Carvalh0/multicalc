@@ -1,5 +1,11 @@
+@font-face {
+  font-family: Calculadora;
+  src: url(../fonts/Calculator.ttf);
+}
+
 :root {
   --font-default: Arial, Helvetica, sans-serif;
+  --font-Calculadora: Calculadora;
 
   --cor1: #3baee6;
   --cor2: #408fb9;
@@ -116,6 +122,7 @@ html {
 .header__title .title {
   font-size: 1.8rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .header__title .subtitle {
@@ -169,7 +176,7 @@ footer .social-media .media .fa-brands {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 750px) {
   .header__menuhamburguer {
     display: flex;
     justify-content: center;

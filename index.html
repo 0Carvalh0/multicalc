@@ -44,93 +44,82 @@
 
     <main>
       <div class="main__container">
-        <p id="calc__visor"></p>
+        <section id="calc__visor">
+          <p id="calc__visor-anterior">OLA</p>
+          <p id="calc__visor-atual"></p>
+        </section>
 
         <table class="calc__teclado">
           <tr>
-            <td class="tecla">
+            <td>
               <button class="tecla" onclick="limpar()">C</button>
             </td>
-            <td class="tecla">
-              <button class="tecla" onclick="deletar()">←</button>
+            <td>
+              <button class="tecla" onclick="deletar()">
+                <i class="fa-solid fa-delete-left"></i>
+              </button>
             </td>
-            <td class="tecla">
+            <td>
               <button class="tecla" onclick="addValor('+')">+</button>
             </td>
-            <td class="tecla">
+            <td>
               <button class="tecla" onclick="addValor('-')">-</button>
             </td>
           </tr>
           <tr>
-            <td class="tecla">
+            <td>
               <button class="tecla" onclick="addValor('7')">7</button>
             </td>
-            <td class="tecla">
+            <td>
               <button class="tecla" onclick="addValor('8')">8</button>
             </td>
-            <td class="tecla">
+            <td>
               <button class="tecla" onclick="addValor('9')">9</button>
             </td>
-            <td class="tecla">
+            <td>
               <button class="tecla" onclick="addValor('*')">x</button>
             </td>
           </tr>
           <tr>
-            <td class="tecla">
+            <td>
               <button class="tecla" onclick="addValor('4')">4</button>
             </td>
-            <td class="tecla">
+            <td>
               <button class="tecla" onclick="addValor('5')">5</button>
             </td>
-            <td class="tecla">
+            <td>
               <button class="tecla" onclick="addValor('6')">6</button>
             </td>
-            <td class="tecla">
+            <td>
               <button class="tecla" onclick="addValor('/')">÷</button>
             </td>
           </tr>
           <tr>
-            <td class="tecla">
-              <button
-                class="tecla"
-                onclick="addValor('1')"
-                style="transform: translate(-0, -60%)"
-              >
-                1
-              </button>
+            <td>
+              <button class="tecla" onclick="addValor('1')">1</button>
             </td>
-            <td class="tecla">
-              <button
-                class="tecla"
-                onclick="addValor('2')"
-                style="transform: translate(-0, -60%)"
-              >
-                2
-              </button>
+            <td>
+              <button class="tecla" onclick="addValor('2')">2</button>
             </td>
-            <td class="tecla">
-              <button
-                class="tecla"
-                onclick="addValor('3')"
-                style="transform: translate(-0, -60%)"
-              >
-                3
-              </button>
+            <td>
+              <button class="tecla" onclick="addValor('3')">3</button>
             </td>
-            <td class="tecla" rowspan="2">
-              <button class="tecla" onclick="calcular()" style="height: 94%">
-                =
-              </button>
+            <td rowspan="2" style="height: calc(100px * 2)">
+              <button class="tecla" onclick="calcular()">=</button>
             </td>
           </tr>
           <tr>
-            <td colspan="2" class="tecla">
-              <button class="tecla" onclick="addValor('0')" style="width: 93%">
+            <td colspan="2">
+              <button
+                class="tecla"
+                onclick="addValor('0')"
+                style="width: calc(100px * 2)"
+              >
                 0
               </button>
             </td>
-            <td class="tecla">
-              <button class="tecla" onclick="addValor('.')">.</button>
+            <td>
+              <button class="tecla" onclick="addValor('.')">,</button>
             </td>
           </tr>
         </table>
