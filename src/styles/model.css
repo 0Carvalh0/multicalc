@@ -7,11 +7,11 @@
   --font-default: Arial, Helvetica, sans-serif;
   --font-Calculadora: Calculadora;
 
-  --cor1: #3baee6;
-  --cor2: #408fb9;
-  --cor3: #287399;
-  --cor4: #1d5570;
-  --cor5: #133647;
+  --cor1: #008cff;
+  --cor2: #006dc7;
+  --cor3: #001242;
+  --cor4: #040f16;
+  --cor5: #000022;
 }
 
 body,
@@ -19,7 +19,7 @@ html {
   box-sizing: border-box;
 
   font-family: var(--font-default);
-  background: var(--cor5) linear-gradient(145deg, #287399, #133647) no-repeat;
+  background: var(--cor3) linear-gradient(165deg, var(--cor1), var(--cor3)) no-repeat;
   background-size: cover;
 }
 
@@ -28,14 +28,9 @@ main {
   justify-content: center;
 
   width: 100vw;
-  height: calc(100vh - 241px);
 }
 
-.header {
-  width: 100vw;
-}
-
-.header__menuhamburguer span {
+.header__menuhamburguer span#btn__menuhamburguer {
   position: absolute;
   left: 20px;
   top: 20px;
@@ -49,10 +44,7 @@ main {
 
   background-color: var(--cor5);
   color: #fff;
-  /* padding: 10px; */
   border-radius: 50%;
-
-  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.404);
 
   font-size: 30px;
   z-index: 10;
@@ -73,7 +65,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
 
-  background-color: var(--cor5);
+  background-color: var(--cor3);
   padding-top: 80px;
   height: calc(100vh - 80px);
 
@@ -83,7 +75,7 @@ main {
 
 .header__menuhamburguer ul li {
   padding: 10px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--cor1);
   text-align: center;
   font-weight: 500;
   font-size: 1.3rem;
@@ -93,7 +85,7 @@ main {
 
 .header__menuhamburguer ul li:hover {
   transform: scale(1.05);
-  background-color: var(--cor4);
+  background-color: var(--cor5);
 }
 
 .header__menuhamburguer ul a {
