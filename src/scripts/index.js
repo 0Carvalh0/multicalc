@@ -46,8 +46,6 @@ function calcular() {
     document.getElementById("calc__visor-anterior").innerHTML = texto;
     res.innerHTML = eval(texto);
   } else {
-    window.alert(
-      "[ERRO] Você não digitou nada, tente colocar um número depois colocar alguma operação depois outro número e clique no simbolo de igual para ver oque acontece!"
-    );
+    window.alert("[ERRO] Por favor, insira um número para calcular.");
   }
 }

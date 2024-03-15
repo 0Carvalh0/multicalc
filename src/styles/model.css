@@ -14,12 +14,14 @@
   --cor5: #000022;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body,
 html {
-  box-sizing: border-box;
-
   font-family: var(--font-default);
-  background: var(--cor3) linear-gradient(165deg, var(--cor1), var(--cor3))
+  background: var(--cor1) linear-gradient(135deg, var(--cor1), var(--cor3))
     no-repeat;
   background-size: cover;
 }
@@ -27,10 +29,6 @@ html {
 main {
   display: flex;
   justify-content: center;
-  height: fit-content;
-
-  left: 0;
-  right: 0;
 }
 
 .header__menuhamburguer span#btn__menuhamburguer {
@@ -56,7 +54,7 @@ main {
 .header__menuhamburguer span:hover {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.404);
   transform: scale(1.1);
-  transition-duration: 0.3s;
+  transition-duration: 0.4s;
 }
 
 .header__menuhamburguer ul {
@@ -70,10 +68,10 @@ main {
 
   background-color: var(--cor3);
   padding-top: 80px;
-  height: calc(100vh - 80px);
+  height: 100vh;
 
   z-index: 9;
-  transition: all ease 0.2s;
+  transition: all ease 0.4s;
 }
 
 .header__menuhamburguer ul li {
@@ -109,36 +107,8 @@ main {
   font-size: 1.5rem;
 }
 
-.header__title {
-  position: relative;
-  margin: auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  top: 40px;
-
-  color: #fff;
-  text-shadow: -2px 2px 8px rgba(0, 0, 0, 0.404);
-}
-
-.header__title .title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.header__title .subtitle {
-  font-size: 1.3rem;
-  font-weight: 500;
-  text-align: center;
-}
-
 footer {
   position: relative;
-  bottom: 0;
   left: 0;
   right: 0;
 
@@ -148,19 +118,15 @@ footer {
 
   padding: 20px;
 
-  background-color: #fff;
+  background-color: #f1f1f1;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.404);
 }
 
 footer .social-media {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  width: 555px;
-  padding-right: 20px;
-
-  background-color: #f1f1f1;
-  border-radius: 20px;
+  padding: 0px 20px;
+  text-align: end;
 }
 
 footer .social-media .media {
@@ -206,28 +172,21 @@ footer .social-media .media .fa-brands {
   }
 
   .header__menuhamburguer ul {
-    padding-top: 70px;
+    padding-top: 50px;
     width: 100vw;
-    height: 100%;
-  }
-
-  .header__title {
-    margin-top: 50px;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
   }
 
   footer {
     flex-direction: column;
+    text-align: center;
   }
 
   footer .social-media {
-    margin-top: 20px;
-    align-items: center;
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  main {
-    scale: 0.8;
+    display: flex;
+    justify-content: center;
+      text-align: center;
   }
 }
