@@ -16,6 +16,7 @@
     <script
       src="https://kit.fontawesome.com/9bfb2428d0.js"
       crossorigin="anonymous"
+      defer
     ></script>
   </head>
 
@@ -35,11 +36,6 @@
           <div id="relogio">00:00</div>
         </ul>
       </aside>
-
-      <div class="header__title">
-        <h1 class="text title">Bem-vindo ao CalculaJão - IMC</h1>
-        <h2 class="text subtitle">A melhor calculadora de IMC da terra</h2>
-      </div>
     </header>
 
     <main>
@@ -69,7 +65,12 @@
           </div>
         </div>
 
-        <input type="button" onclick="imc()" id="calc__botao" value="Calcular" />
+        <input
+          type="button"
+          onclick="imc()"
+          id="calc__botao"
+          value="Calcular"
+        />
 
         <div id="res"></div>
 
@@ -80,7 +81,16 @@
             </tr>
             <tr>
               <th scope="col" class="table__col-Titulo">IMC</th>
-              <th scope="col" class="table__col-Titulo">CLASSIFICAÇÃO</th>
+              <th
+                scope="col"
+                class="table__col-Titulo"
+                style="
+                  border-left: 2px solid var(--cor1);
+                  border-right: 2px solid var(--cor1);
+                "
+              >
+                CLASSIFICAÇÃO
+              </th>
               <th scope="col" class="table__col-Titulo">OBESIDADE (GRAU)</th>
             </tr>
           </thead>

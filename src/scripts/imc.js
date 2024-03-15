@@ -20,17 +20,17 @@ function imc() {
     window.alert(`[ERRO] Digite um peso e uma altura!`);
   } else {
     res.innerHTML = `SEU IMC É:<br>${imcres.toFixed(2).replace(".", ",")}`;
-    res.style.opacity = 1;
+    res.style.display = "flex";
     if (imcres < 18.5) {
-      linha1.style.backgroundColor = "#b6e7ff";
+      linha1.style.backgroundColor = "#00000050";
     } else if (imcres >= 18.5 && imcres < 24.9) {
-      linha2.style.backgroundColor = "#b6e7ff";
+      linha2.style.backgroundColor = "#00000050";
     } else if (imcres >= 25 && imcres < 29.9) {
-      linha3.style.backgroundColor = "#b6e7ff";
+      linha3.style.backgroundColor = "#00000050";
     } else if (imcres >= 30 && imcres < 39.9) {
-      linha4.style.backgroundColor = "#b6e7ff";
+      linha4.style.backgroundColor = "#00000050";
     } else {
-      linha5.style.backgroundColor = "#b6e7ff";
+      linha5.style.backgroundColor = "#00000050";
     }
   }
 }
