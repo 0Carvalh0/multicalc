@@ -19,6 +19,7 @@
   font-weight: 500;
   height: 100px;
   width: 100%;
+  max-width: 360px;
 
   display: flex;
   flex-direction: column;
@@ -28,6 +29,7 @@
 
 .main__container #calc__visor p {
   font-size: 4rem;
+  word-wrap: break-word;
 }
 
 .main__container #calc__visor p#calc__visor-anterior {

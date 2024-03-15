@@ -25,7 +25,7 @@ btnMenu.addEventListener("click", () => {
     btnMenu.classList.remove("fa-bars");
     btnMenu.classList.add("fa-xmark");
   } else {
-    listaMenu.style.left = "-500px";
+    listaMenu.style.left = "-2000px";
     btnMenu.style.backgroundColor = "var(--cor5)";
     btnMenu.style.color = "#fff";
 
