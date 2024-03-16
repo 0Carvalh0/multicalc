@@ -5,6 +5,6 @@ const res = document.querySelector("div#res");
 function retangulo() {
   let area = base.value * altura.value;
 
-  res.style.opacity = 1;
+  res.style.display = "flex";
   res.innerHTML = area + "m²";
 }

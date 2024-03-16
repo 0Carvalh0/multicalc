@@ -9,41 +9,39 @@
   </head>
   <body>
     <main>
-      <section class="container__Calculo">
-        <form method="get">
+      <form method="get" class="container__Calculo">
+        <div>
           <div>
-            <div>
-              <label for="base">Base:</label>
-              <input
-                type="number"
-                name="base"
-                id="iform__base"
-                required
-                placeholder="Digite a base do seu retângulo..."
-              />
-            </div>
-            <div>
-              <label for="altura">Altura:</label>
-              <input
-                type="number"
-                name="altura"
-                id="iform__altura"
-                required
-                placeholder="Digite a altura do seu retângulo..."
-              />
-            </div>
+            <label for="base">Base:</label>
+            <input
+              type="number"
+              name="base"
+              id="iform__base"
+              required
+              placeholder="Digite a base do seu retângulo..."
+            />
           </div>
+          <div>
+            <label for="altura">Altura:</label>
+            <input
+              type="number"
+              name="altura"
+              id="iform__altura"
+              required
+              placeholder="Digite a altura do seu retângulo..."
+            />
+          </div>
+        </div>
 
-          <input
-            type="button"
-            onclick="retangulo()"
-            id="calc__botao"
-            value="Calcular"
-          />
+        <input
+          type="button"
+          onclick="retangulo()"
+          id="calc__botao"
+          value="Calcular"
+        />
 
-          <div id="res"></div>
-        </form>
-      </section>
+        <div id="res"></div>
+      </form>
     </main>
 
     <script src="../../scripts/areasScripts/retangulo.js"></script>
