@@ -16,6 +16,7 @@
     <script
       src="https://kit.fontawesome.com/9bfb2428d0.js"
       crossorigin="anonymous"
+      defer
     ></script>
   </head>
 
@@ -39,17 +40,15 @@
 
     <main>
       <form method="get">
-        <div>
-          <div>
-            <label for="peso">Números:</label>
-            <input
-              type="number"
-              name="numero"
-              id="iform__numero"
-              required
-              placeholder="Digite um valor para fazer a média..."
-            />
-          </div>
+        <div id="container__calc">
+          <label for="peso">Números:</label>
+          <input
+            type="number"
+            name="numero"
+            id="iform__numero"
+            required
+            placeholder="Digite um valor para fazer a média..."
+          />
         </div>
 
         <div id="container__botoes">
@@ -75,10 +74,10 @@
 
         <div id="res"></div>
       </form>
-      <h2>Valores para calculo de média</h2>
-      <ul id="tabeladeValores">
-        <!-- <li>Valor 1</li> -->
-      </ul>
+      <div id="tabela">
+        <h2>Valores para calculo de média</h2>
+        <ul id="tabeladeValores"></ul>
+      </div>
     </main>
 
     <script src="../scripts/media.js"></script>
