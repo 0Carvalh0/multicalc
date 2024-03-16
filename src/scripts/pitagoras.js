@@ -9,6 +9,6 @@ function pitagoras() {
     window.alert(`[ERRO] Digite o valor dos dois catetos!`);
   } else {
     res.innerHTML = `Hipotenusa: ${pitagoras.toFixed(2).replace(".", ",")}`;
-    res.style.opacity = 1;
+    res.style.display = "flex";
   }
 }
