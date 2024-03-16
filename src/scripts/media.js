@@ -31,6 +31,10 @@ function remove() {
   listaMedia.pop();
   tabelaValores.removeChild(tabelaValores.lastChild);
 
+  if (listaMedia.length <= 0) {
+    document.getElementById("tabela").style.display = "none";
+  }
+
   if (res.style.display === "flex") {
     res.style.display = "none";
   }
