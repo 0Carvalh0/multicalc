@@ -43,13 +43,17 @@ function remove() {
 }
 
 function media() {
-  let media = 0;
+  if (listaMedia.length <= 0) {
+    window.alert("[ERRO] Adicione um valor para realizar a média!");
+  } else {
+    let media = 0;
 
-  for (let i = 0; i < listaMedia.length; i++) {
-    media += Number(listaMedia[i]);
+    for (let i = 0; i < listaMedia.length; i++) {
+      media += Number(listaMedia[i]);
+    }
+    media = media / listaMedia.length;
+
+    res.innerHTML = media.toFixed(2);
+    res.style.display = "flex";
   }
-  media = media / listaMedia.length;
-
-  res.innerHTML = media.toFixed(2);
-  res.style.display = "flex";
 }
