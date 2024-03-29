@@ -13,10 +13,14 @@
     <link rel="stylesheet" href="./src/styles/reset.css" />
     <link rel="stylesheet" href="./src/styles/model.css" />
     <link rel="stylesheet" href="./src/styles/index.css" />
+
     <script
       src="https://kit.fontawesome.com/9bfb2428d0.js"
       crossorigin="anonymous"
+      defer
     ></script>
+    <script src="./src/scripts/index.js" defer></script>
+    <script src="./src/scripts/sidebar.js" defer></script>
   </head>
 
   <body>
@@ -38,99 +42,83 @@
     </header>
 
     <main>
-      <div class="main__container">
+      <section class="main__container">
         <section id="calc__visor">
           <p id="calc__visor-anterior"></p>
           <p id="calc__visor-atual"></p>
         </section>
 
-        <table class="calc__teclado">
-          <tr>
-            <td>
-              <button class="tecla operador" onclick="limpar()">C</button>
-            </td>
-            <td>
-              <button class="tecla operador" onclick="deletar()">
-                <i class="fa-solid fa-delete-left"></i>
-              </button>
-            </td>
-            <td>
-              <button class="tecla operador" onclick="addValor('+')">+</button>
-            </td>
-            <td>
-              <button class="tecla operador" onclick="addValor('-')">-</button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button class="tecla" onclick="addValor('7')">7</button>
-            </td>
-            <td>
-              <button class="tecla" onclick="addValor('8')">8</button>
-            </td>
-            <td>
-              <button class="tecla" onclick="addValor('9')">9</button>
-            </td>
-            <td>
-              <button class="tecla operador" onclick="addValor('*')">X</button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button class="tecla" onclick="addValor('4')">4</button>
-            </td>
-            <td>
-              <button class="tecla" onclick="addValor('5')">5</button>
-            </td>
-            <td>
-              <button class="tecla" onclick="addValor('6')">6</button>
-            </td>
-            <td>
-              <button class="tecla operador" onclick="addValor('/')">÷</button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button class="tecla" onclick="addValor('1')">1</button>
-            </td>
-            <td>
-              <button class="tecla" onclick="addValor('2')">2</button>
-            </td>
-            <td>
-              <button class="tecla" onclick="addValor('3')">3</button>
-            </td>
-            <td rowspan="2"><button class="tecla operador igual" onclick="calcular()">=</button></td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <button class="tecla" onclick="addValor('0')" style="width: 224px;">
-                0
-              </button>
-            </td>
-            <td>
-              <button class="tecla" onclick="addValor('.')">,</button>
-            </td>
-          </tr>
-        </table>
-      </div>
+        <section class="calc__teclado">
+          <button class="tecla operador" onclick="limpar()">C</button>
+
+          <button class="tecla operador" onclick="deletar()">
+            <i class="fa-solid fa-delete-left"></i>
+          </button>
+
+          <button class="tecla operador" onclick="addValor('+')">+</button>
+
+          <button class="tecla operador" onclick="addValor('-')">-</button>
+
+          <button class="tecla" onclick="addValor('7')">7</button>
+
+          <button class="tecla" onclick="addValor('8')">8</button>
+
+          <button class="tecla" onclick="addValor('9')">9</button>
+
+          <button class="tecla operador" onclick="addValor('*')">X</button>
+
+          <button class="tecla" onclick="addValor('4')">4</button>
+
+          <button class="tecla" onclick="addValor('5')">5</button>
+
+          <button class="tecla" onclick="addValor('6')">6</button>
+
+          <button class="tecla operador" onclick="addValor('/')">÷</button>
+
+          <button class="tecla" onclick="addValor('1')">1</button>
+
+          <button class="tecla" onclick="addValor('2')">2</button>
+
+          <button class="tecla" onclick="addValor('3')">3</button>
+
+          <button class="tecla operador igual" onclick="calcular()">=</button>
+
+          <button
+            class="tecla"
+            onclick="addValor('0')"
+            style="grid-column-start: 1; grid-column-end: 3; width: 100%"
+          >
+            0
+          </button>
+
+          <button class="tecla" onclick="addValor('.')">,</button>
+        </section>
+      </section>
     </main>
 
     <footer>
       <div>
-        <p>&copy; 2024 por João Victor Carvalho. Todos os direitos reservados.</p>
-            <p>Este site é destinado a fins educacionais e não é comercializado.</p>
+        <p>
+          &copy; 2024 por João Victor Carvalho. Todos os direitos reservados.
+        </p>
+        <p>Este site é destinado a fins educacionais e não é comercializado.</p>
       </div>
       <div class="social-media">
-        <a href="https://github.com/0Carvalh0" class="media"
+        <a
+          href="https://github.com/0Carvalh0"
+          class="media"
+          target="_blank"
+          rel="external"
           ><span class="fa-brands fa-github"></span><span>GitHub</span></a
         >
-        <a href="https://www.linkedin.com/in/jo%C3%A3o-victor-carvalho-de-souza-806347244/" class="media"
+        <a
+          href="https://www.linkedin.com/in/jo%C3%A3o-victor-carvalho-de-souza-806347244/"
+          class="media"
+          target="_blank"
+          rel="external"
           ><span class="fa-brands fa-linkedin"></span><span>LinkedIn</span></a
         >
       </div>
     </footer>
-
-    <script src="./src/scripts/index.js"></script>
-    <script src="./src/scripts/sidebar.js"></script>
   </body>
 </html>

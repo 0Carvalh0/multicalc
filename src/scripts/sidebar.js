@@ -17,19 +17,17 @@ const trocarHora = setInterval(function time() {
 });
 
 btnMenu.addEventListener("click", () => {
-  if (listaMenu.style.left < "0") {
-    listaMenu.style.left = "0";
+  if (listaMenu.style.left === "-2000px") {
+    listaMenu.style.left = "0px";
     btnMenu.style.backgroundColor = "#fff";
     btnMenu.style.color = "var(--cor5)";
 
-    btnMenu.classList.remove("fa-bars");
-    btnMenu.classList.add("fa-xmark");
+    btnMenu.classList.replace("fa-bars", "fa-xmark");
   } else {
     listaMenu.style.left = "-2000px";
     btnMenu.style.backgroundColor = "var(--cor5)";
     btnMenu.style.color = "#fff";
-
-    btnMenu.classList.remove("fa-xmark");
-    btnMenu.classList.add("fa-bars");
+  
+    btnMenu.classList.replace("fa-xmark", "fa-bars");
   }
 });
