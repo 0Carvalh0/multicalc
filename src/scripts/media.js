@@ -14,7 +14,7 @@ function add() {
   if (formNumero.value === "") {
     window.alert("[ERRO] Digite um valor para adicionar a média!");
   } else {
-    document.getElementById("tabela").style.display = "block";
+    document.getElementById("tabela").style.display = "flex";
     listaMedia.push(formNumero.value);
     li.innerHTML = `${formNumero.value} Adicionado`;
     formNumero.value = "";

@@ -1,4 +1,9 @@
+main {
+  justify-content: space-evenly;
+}
+
 main form {
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -85,10 +90,10 @@ main form #res {
   font-weight: 600;
 }
 
-main > div {
+main #tabela {
   display: none;
-  margin-left: 20px;
-  border-radius: 30px;
+  flex-flow: column nowrap;
+  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -119,6 +124,7 @@ main #tabeladeValores li {
 @media screen and (max-width: 1200px) {
   main {
     flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    gap: 50px;
   }
 }
