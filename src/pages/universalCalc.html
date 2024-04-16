@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../images/icons/calculadora.ico"
+      type="image/x-icon"
+    />
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/model.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+
+    <script
+      src="https://kit.fontawesome.com/9bfb2428d0.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="../scripts/universalCalc.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <aside class="header__menuhamburguer">
+        <span class="fa-solid fa-bars" id="btn__menuhamburguer"></span>
+
+        <ul id="lista__menu">
+          <div>
+            <a href="../../index.html"><li>Calculadora Simples</li></a>
+            <a href="../pages/imc.html"><li>IMC</li></a>
+            <a href="../pages/media.html"><li>Média Aritmética</li></a>
+            <a href="../pages/pitagoras.html"><li>Pitágoras</li></a>
+            <a href="../pages/area.html"><li>Áreas de Figuras Planas</li></a>
+          </div>
+          <div id="relogio">00:00</div>
+        </ul>
+      </aside>
+    </header>
+
+    <main>
+      <section class="main__container">
+        <section id="calc__visor">
+          <p id="calc__visor-anterior"></p>
+          <p id="calc__visor-atual"></p>
+        </section>
+
+        <section class="calc__teclado">
+          <button class="tecla operador" onclick="limpar()">C</button>
+          <button class="tecla operador" onclick="deletar()"><i class="fa-solid fa-delete-left"></i></button>
+          <button class="tecla operador" onclick="addValor('+')">+</button>
+          <button class="tecla operador" onclick="addValor('-')">-</button>
+          <button class="tecla" onclick="addValor('7')">7</button>
+          <button class="tecla" onclick="addValor('8')">8</button>
+          <button class="tecla" onclick="addValor('9')">9</button>
+          <button class="tecla operador" onclick="addValor('*')">X</button>
+          <button class="tecla" onclick="addValor('4')">4</button>
+          <button class="tecla" onclick="addValor('5')">5</button>
+          <button class="tecla" onclick="addValor('6')">6</button>
+          <button class="tecla operador" onclick="addValor('/')">÷</button>
+          <button class="tecla" onclick="addValor('1')">1</button>
+          <button class="tecla" onclick="addValor('2')">2</button>
+          <button class="tecla" onclick="addValor('3')">3</button>
+          <button class="tecla operador igual" onclick="calcular()">=</button>
+          <button class="tecla" onclick="addValor('0')" style="grid-column-start: 1; grid-column-end: 3; width: 100%">0</button>
+          <button class="tecla" onclick="addValor('.')">,</button>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <p>
+          &copy; 2024 por João Victor Carvalho. Todos os direitos reservados.
+        </p>
+        <p>Este site é destinado a fins educacionais e não é comercializado.</p>
+      </div>
+      <div class="social-media">
+        <a
+          href="https://github.com/0Carvalh0"
+          class="media"
+          target="_blank"
+          rel="external"
+          ><span class="fa-brands fa-github"></span><span>GitHub</span></a
+        >
+        <a
+          href="https://www.linkedin.com/in/jo%C3%A3o-victor-carvalho-de-souza-806347244/"
+          class="media"
+          target="_blank"
+          rel="external"
+          ><span class="fa-brands fa-linkedin"></span><span>LinkedIn</span></a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

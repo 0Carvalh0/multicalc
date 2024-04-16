@@ -1,0 +1,33 @@
+body {
+    min-height: 100vh;
+}
+
+.main-menu {
+    height: 100vh;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background: #0f0f0f linear-gradient(135deg,#5d5d5d, #0f0f0f, #5d5d5d);
+}
+
+.main-menu__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #f1f1f1;
+
+    background-color: #1212fd;
+    padding: .5rem 2rem;
+    border-radius: 50rem;
+    box-shadow: 0 0 1rem #00000060;
+
+    transition: all ease-out .3s;
+}
+
+.main-menu__link:active {
+    transform: scale(.9);
+}
