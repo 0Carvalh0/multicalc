@@ -1,104 +1,44 @@
-.main__container {
-  position: relative;
-
-  background-color: #333;
-  box-shadow: 10px 10px 0px #000;
-  border-radius: 50px;
-  padding: 10px;
-  height: fit-content;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  overflow: hidden;
-
-  scale: 0.8;
-}
-
-.main__container #calc__visor {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 150px;
-  width: 100%;
-
-  padding: 15px 15px 0px 0px;
-
+@font-face {
   font-family: Calculadora;
-  color: #fff;
-  font-weight: 500;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-around;
+  src: url(../fonts/Calculator.ttf);
 }
 
-.main__container #calc__visor p {
-  font-size: 4rem;
-  word-wrap: break-word;
+:root {
+  --font-default: Arial, Helvetica, sans-serif;
+  --font-Calculadora: Calculadora;
+
+  --cor1: #008cff;
+  --cor2: #006dc7;
+  --cor3: #001242;
+  --cor4: #040f16;
+  --cor5: #000022;
 }
 
-.main__container #calc__visor p#calc__visor-anterior {
-  font-size: 3rem;
-  opacity: 0.6;
+body,
+html {
+  min-height: 100vh;
+
+  font-family: var(--font-default);
+  background: var(--cor1) linear-gradient(135deg, var(--cor1), var(--cor3))
+    no-repeat;
+  background-size: cover;
 }
 
-.main__container .calc__teclado {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 9rem;
+.main-container__return-button {
+  text-decoration: none;
+  position: fixed;
+  z-index: 999;
+  left: 1rem;
+  top: 1rem;
 
   display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
+  place-items: center;
 
-.main__container .calc__teclado .tecla {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #fff;
 
-  font-family: Calculadora;
-  font-size: 4rem;
-  font-weight: 500;
-  border-radius: 30px;
-  border: 5px groove #fff #222;
-  background-image: linear-gradient(75deg, #444, #111, #444);
-  color: white;
-  cursor: pointer;
-
-  width: 100px;
-  height: 100px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: -0.05rem -0.05rem 0.3rem #fff, 0.05rem 0.05rem 0.3rem #000;
 
   transition: all ease 0.2s;
-}
-
-.main__container .calc__teclado .operador {
-  background-image: linear-gradient(75deg, #008cff, #006dc7, #008cff);
-}
-
-.main__container .calc__teclado .igual {
-  grid-row-start: 4;
-  grid-row-end: 6;
-  grid-column-start: 4;
-  height: 100%;
-}
-
-.main__container .calc__teclado .tecla:hover {
-  transform: scale(1.02);
-  background-image: linear-gradient(75deg, #555, #222, #555);
-  box-shadow: 6px 6px 0px #000;
-}
-
-.main__container .calc__teclado .operador:hover {
-  background-image: linear-gradient(75deg, #249dff, #008cff, #249dff);
-}
-
-.main__container .calc__teclado .tecla .fa-solid {
-  font-size: 2.8rem;
-}
-
-.main__container .calc__teclado .tecla::selection {
-  background-color: transparent;
 }

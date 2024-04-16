@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../images/icons/calculadora.ico"
+      type="image/x-icon"
+    />
+    <title>Calculadora</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/calc.css" />
+
+    <script
+      src="https://kit.fontawesome.com/9bfb2428d0.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="../scripts/calc.js" defer></script>
+  </head>
+
+  <body>
+    <main class="main-container">
+      <a
+      class="fa-solid fa-arrow-left main-container__return-button"
+      href="../../index.html"
+      target="_self"
+      ></a>
+      <section class="main-container__calc">
+        <section class="main-container__display">
+          <p class="main-container__display-prev"></p>
+          <p class="main-container__display-current"></p>
+        </section>
+
+        <section class="main-container__calc-keyboard">
+          <button class="key operator" onclick="clear()">C</button>
+          <button class="key operator" onclick="del()">
+            <i class="fa-solid fa-delete-left"></i>
+          </button>
+          <button class="key operator" onclick="addValue('+')">+</button>
+          <button class="key operator" onclick="addValue('-')">-</button>
+          <button class="key" onclick="addValue('7')">7</button>
+          <button class="key" onclick="addValue('8')">8</button>
+          <button class="key" onclick="addValue('9')">9</button>
+          <button class="key operator" onclick="addValue('*')">X</button>
+          <button class="key" onclick="addValue('4')">4</button>
+          <button class="key" onclick="addValue('5')">5</button>
+          <button class="key" onclick="addValue('6')">6</button>
+          <button class="key operator" onclick="addValue('/')">÷</button>
+          <button class="key" onclick="addValue('1')">1</button>
+          <button class="key" onclick="addValue('2')">2</button>
+          <button class="key" onclick="addValue('3')">3</button>
+          <button class="key operator" onclick="calc()">=</button>
+          <button class="key" onclick="addValue('0')">0</button>
+          <button class="key" onclick="addValue('.')">,</button>
+        </section>
+      </section>  
+    </main>
+  </body>
+</html>
