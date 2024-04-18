@@ -1,7 +1,7 @@
 body {
   min-height: 100vh;
 
-  background: #0f0f0f linear-gradient(135deg, #5d5d5d, #0f0f0f, #5d5d5d);
+  background: var(--color5) linear-gradient(135deg, #000, var(--color5), #000);
 }
 
 .main-menu {
@@ -14,16 +14,14 @@ body {
 }
 
 .main-menu__link {
-  text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  font-size: 1.3rem;
-  color: #f1f1f1;
+  font-size: 16px;
+  color: var(--color1);
 
-  background-color: #1212fd;
-  padding: 0.5rem 2rem;
-  border-radius: 50rem;
-  box-shadow: 0 0 1rem #00000060;
+  padding: 24px;
+  border-radius: 100rem;
+  box-shadow: var(--boxShadowButton);
 
   transition: all ease-out 0.3s;
 }
@@ -43,8 +41,8 @@ footer {
 
   padding: 1rem 2rem;
 
-  background-color: #f1f1f1;
-  box-shadow: inset 0px 0px 10px #00000070;
+  background-color: var(--color2);
+  box-shadow: inset -2px -2px 8px #000, inset 2px 2px 8px #fff;
 }
 
 footer section:last-child {
@@ -55,7 +53,6 @@ footer section:last-child {
 }
 
 footer section:last-child .footer__link-social {
-  text-decoration: none;
   color: #000;
 
   padding: 10px 0px;

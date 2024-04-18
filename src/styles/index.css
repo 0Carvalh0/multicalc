@@ -1,27 +1,33 @@
 @font-face {
-  font-family: Calculadora;
+  font-family: calculator;
   src: url(../fonts/Calculator.ttf);
 }
 
 :root {
-  --font-default: Arial, Helvetica, sans-serif;
-  --font-Calculadora: Calculadora;
+  --defaultFont: Arial, Helvetica, sans-serif;
+  --calculatorFont: calculator, monospace;
 
-  --cor1: #008cff;
-  --cor2: #006dc7;
-  --cor3: #001242;
-  --cor4: #040f16;
-  --cor5: #000022;
+  --color1: #fbfff1;
+  --color2: #b4c5e4;
+  --color3: #3d52d5;
+  --color4: #090c9b;
+  --color5: #3c3744;
+
+  --boxShadowButton: 3px 3px 4px #000, -3px -3px 4px var(--color2);
 }
 
 body,
 html {
+  font-family: var(--defaultFont);
+}
+
+.main-container {
   min-height: 100vh;
 
-  font-family: var(--font-default);
-  background: var(--cor1) linear-gradient(135deg, var(--cor1), var(--cor3))
-    no-repeat;
-  background-size: cover;
+  display: grid;
+  place-items: center;
+
+  background: var(--color5);
 }
 
 .main-container__return-button {
@@ -34,11 +40,11 @@ html {
   display: grid;
   place-items: center;
 
-  color: #fff;
+  color: var(--color1);
 
   padding: 0.5rem;
   border-radius: 50%;
-  box-shadow: -0.05rem -0.05rem 0.3rem #fff, 0.05rem 0.05rem 0.3rem #000;
+  box-shadow: var(--boxShadowButton);
 
   transition: all ease 0.2s;
 }

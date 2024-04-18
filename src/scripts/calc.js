@@ -1,29 +1,29 @@
 const res = document.querySelector(".main-container__display-current");
 
 function addValue(num) {
-  let texto = document.querySelector(
+  let text = document.querySelector(
     ".main-container__display-current"
   ).innerHTML;
 
-  if (texto === "") {
-    let regex = /[\+\-\*\/\.]$/;
+  if (text === "") {
+    let operations = /[\+\-\*\/\.]$/;
 
-    if (!regex.test(num)) {
+    if (!operations.test(num)) {
       res.innerHTML = num;
     }
   } else {
-    let regex = /[\+\-\*\/\.]$/;
+    let operations = /[\+\-\*\/\.]$/;
 
-    if (regex.test(num)) {
-      if (!regex.test(texto.slice(-1))) {
+    if (operations.test(num)) {
+      if (!operations.test(text.slice(-1))) {
         res.innerHTML += num;
       }
     } else {
-      let operacoes = /[\+\-\*\/]/;
-      let partes = texto.split(operacoes);
-      let ultima = partes[partes.length - 1];
+      let operations = /[\+\-\*\/]/;
+      let parts = text.split(operations);
+      let last = parts[parts.length - 1];
 
-      if (ultima.includes(".")) {
+      if (last.includes(".")) {
         res.innerHTML += num;
       } else {
         res.innerHTML += num;
@@ -38,17 +38,18 @@ function clear() {
 }
 
 function del() {
-  let texto = document.querySelector(".main-container__display-current").innerHTML;
-  res.innerHTML = texto.substring(0, texto.length - 1);
+  let text = document.querySelector(
+    ".main-container__display-current"
+  ).innerHTML;
+  res.innerHTML = text.substring(0, text.length - 1);
 }
 
 function calc() {
-  let texto = document.querySelector(
+  let text = document.querySelector(
     ".main-container__display-current"
   ).innerHTML;
-  if (texto) {
-    document.querySelector(".main-container__display-prev").innerHTML =
-      texto;
-    res.innerHTML = eval(texto);
+  if (text) {
+    document.querySelector(".main-container__display-prev").innerHTML = text;
+    res.innerHTML = eval(text);
   }
 }
