@@ -11,7 +11,7 @@
     <title>Calculadora</title>
 
     <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/model.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles/media.css" />
     <script
       src="https://kit.fontawesome.com/9bfb2428d0.js"
@@ -21,66 +21,51 @@
   </head>
 
   <body>
-    <header class="header">
-      <aside class="header__menuhamburguer">
-        <span class="fa-solid fa-bars" id="btn__menuhamburguer"></span>
-
-        <ul id="lista__menu">
-          <div>
-            <a href="../../index.html"><li>Calculadora Simples</li></a>
-            <a href="./imc.html"><li>IMC</li></a>
-            <a href="./media.html"><li>Média Aritmética</li></a>
-            <a href="./pitagoras.html"><li>Pitágoras</li></a>
-            <a href="./area.html"><li>Áreas de Figuras Planas</li></a>
-          </div>
-          <div id="relogio">00:00</div>
-        </ul>
-      </aside>
-    </header>
-
-    <main>
-      <form method="get">
-        <div id="container__calc">
-          <label for="peso">Números:</label>
+    <main class="main-container">
+      <a
+      class="fa-solid fa-arrow-left main-container__return-button"
+      href="../../index.html"
+      target="_self"
+      ></a>
+      <form method="get" class="main-container__form">
           <input
             type="number"
-            name="numero"
-            id="iform__numero"
+            name="inputForm__number"
+            id="inputForm__number"
             required
             placeholder="Digite um valor para fazer a média..."
           />
-        </div>
 
-        <div id="container__botoes">
+        <section id="main-container__buttonContainer">
           <input
             type="button"
             onclick="add()"
-            id="adicionar__botao"
+            id="add__Button"
             value="Adicionar"
           />
           <input
             type="button"
             onclick="remove()"
-            id="remover__botao"
-            value="Eliminar"
+            id="remove__Button"
+            value="Remover"
           />
           <input
             type="button"
             onclick="media()"
-            id="calc__botao"
+            id="calc__Button"
             value="Calcular"
           />
-        </div>
+        </section>
 
         <div id="res"></div>
       </form>
-      <div id="tabela">
+
+      <section id="main-container__averageContainer">
         <h2>Valores para calculo de média</h2>
-        <ul id="tabeladeValores"></ul>
-      </div>
+        <ul id="main-container__averageList"></ul>
+      </section>
     </main>
 
     <script src="../scripts/media.js"></script>
-    <script src="../scripts/sidebar.js"></script>
   </body>
 </html>

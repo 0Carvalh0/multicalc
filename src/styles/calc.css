@@ -1,4 +1,4 @@
-.main-container__calc {
+.mainContainer__calc {
   width: 100vw;
   max-width: 328px;
   border-radius: 2rem;
@@ -11,11 +11,11 @@
   overflow: hidden;
 }
 
-.main-container__calc button, .main-container__display {
+.mainContainer__calc button, .mainContainer__display {
   font-family: var(--calculatorFont)
 }
 
-.main-container__display {
+.mainContainer__display {
   height: 150px;
   width: 100%;
   overflow: hidden;
@@ -30,16 +30,16 @@
   justify-content: space-around;
 }
 
-.main-container__display .main-container__display-current {
+.mainContainer__display .mainContainer__display-current {
   font-size: 4rem;
 }
 
-.main-container__display .main-container__display-prev {
+.mainContainer__display .mainContainer__display-prev {
   font-size: 3rem;
   opacity: 0.6;
 }
 
-.main-container__calc-keyboard {
+.mainContainer__calcKeyboard {
   width: 100%;
   padding: 1rem;
 
@@ -49,7 +49,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.main-container__calc-keyboard .key {
+.mainContainer__calcKeyboard .key {
   width: 52px;
   height: 52px;
 
@@ -61,7 +61,7 @@
   color: var(--color1);
 
   box-shadow: var(--boxShadowButton);
-  border: none;
+  border: 2px outset var(--color5);
   border-radius: 50%;
 
   cursor: pointer;
@@ -92,6 +92,6 @@
   background: linear-gradient(135deg, var(--color3), var(--color4));
 }
 
-.main-container__calc-keyboard .key::selection {
+.mainContainer__calcKeyboard .key::selection {
   background-color: transparent;
 }

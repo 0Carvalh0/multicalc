@@ -13,7 +13,7 @@
   --color4: #090c9b;
   --color5: #3c3744;
 
-  --boxShadowButton: 3px 3px 4px #000, -3px -3px 4px var(--color2);
+  --boxShadowButton: 3px 3px 8px rgb(0, 0, 0, 50), -3px -3px 8px var(--color5);
 }
 
 body,
@@ -21,7 +21,7 @@ html {
   font-family: var(--defaultFont);
 }
 
-.main-container {
+.mainContainer {
   min-height: 100vh;
 
   display: grid;
@@ -30,7 +30,7 @@ html {
   background: var(--color5);
 }
 
-.main-container__return-button {
+.mainContainer__returnButton {
   text-decoration: none;
   position: fixed;
   z-index: 999;

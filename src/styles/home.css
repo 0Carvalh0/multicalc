@@ -1,10 +1,10 @@
 body {
   min-height: 100vh;
 
-  background: var(--color5) linear-gradient(135deg, #000, var(--color5), #000);
+  background: var(--color5) linear-gradient(45deg, #000, var(--color5), #000);
 }
 
-.main-menu {
+.mainMenu {
   min-height: 100vh;
 
   display: flex;
@@ -13,20 +13,22 @@ body {
   align-items: center;
 }
 
-.main-menu__link {
+.mainMenu__link {
+  width: 50%;
   text-transform: uppercase;
   text-align: center;
   font-size: 16px;
   color: var(--color1);
 
-  padding: 24px;
+  padding: 16px;
   border-radius: 100rem;
+  border: 2px outset var(--color5);
   box-shadow: var(--boxShadowButton);
 
   transition: all ease-out 0.3s;
 }
 
-.main-menu__link:active {
+.mainMenu__link:active {
   transform: scale(0.9);
 }
 

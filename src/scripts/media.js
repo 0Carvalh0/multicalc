@@ -1,20 +1,19 @@
-const res = document.getElementById("res");
-const formNumero = document.getElementById("iform__numero");
-const btnAdicionar = document.getElementById("adicionar__botao");
-const btnEliminar = document.getElementById("remover__botao");
-const btnCalcular = document.getElementById("calc__botao");
-const tabelaValores = document.getElementById("tabeladeValores");
+const res = document.querySelector("#res");
+const formNumero = document.querySelector("#inputForm__number");
+const btnAdicionar = document.querySelector("#add_button");
+const btnEliminar = document.querySelector("#remove__button");
+const btnCalcular = document.querySelector("#calc__button");
+const tabelaValores = document.querySelector("#main-container__averageList");
 let listaMedia = [];
 
 // FUNÇÕES
-
 function add() {
   const li = document.createElement("li");
 
   if (formNumero.value === "") {
     window.alert("[ERRO] Digite um valor para adicionar a média!");
   } else {
-    document.getElementById("tabela").style.display = "flex";
+    document.querySelector("#tabela").style.display = "flex";
     listaMedia.push(formNumero.value);
     li.innerHTML = `${formNumero.value} Adicionado`;
     formNumero.value = "";
@@ -32,7 +31,7 @@ function remove() {
   tabelaValores.removeChild(tabelaValores.lastChild);
 
   if (listaMedia.length <= 0) {
-    document.getElementById("tabela").style.display = "none";
+    document.querySelector("#tabela").style.display = "none";
   }
 
   if (res.style.display === "flex") {

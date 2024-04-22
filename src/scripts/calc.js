@@ -1,8 +1,8 @@
-const res = document.querySelector(".main-container__display-current");
+const res = document.querySelector(".mainContainer__display-current");
 
 function addValue(num) {
   let text = document.querySelector(
-    ".main-container__display-current"
+    ".mainContainer__display-current"
   ).innerHTML;
 
   if (text === "") {
@@ -34,22 +34,22 @@ function addValue(num) {
 
 function clear() {
   res.innerHTML = "";
-  document.querySelector(".main-container__display-prev").innerHTML = "";
+  document.querySelector(".mainContainer__display-prev").innerHTML = "";
 }
 
 function del() {
   let text = document.querySelector(
-    ".main-container__display-current"
+    ".mainContainer__display-current"
   ).innerHTML;
   res.innerHTML = text.substring(0, text.length - 1);
 }
 
 function calc() {
   let text = document.querySelector(
-    ".main-container__display-current"
+    ".mainContainer__display-current"
   ).innerHTML;
   if (text) {
-    document.querySelector(".main-container__display-prev").innerHTML = text;
+    document.querySelector(".mainContainer__display-prev").innerHTML = text;
     res.innerHTML = eval(text);
   }
 }
