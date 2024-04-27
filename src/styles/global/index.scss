@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@import "./reset.css";
+@import "./fonts";
+@import "./variables";
+@import "./functions";
+
+@import "../pages/home/home.scss";
+@import "../pages/calc/calc.scss";
+@import "../pages/average/average.scss";
+@import "../pages/bmi/bmi.scss";
+@import "../pages/pitagoras/pitagoras.scss";
+@import "../pages/area/area.scss";
+
+body {
+  min-height: 100vh;
+}
+
+.mainContainer__returnButton {
+  text-decoration: none;
+  position: fixed;
+  z-index: 999;
+  left: 1rem;
+  top: 1rem;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--color1);
+
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: var(--boxShadowButton);
+
+  transition: all ease 0.2s;
+}

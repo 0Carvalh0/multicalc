@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="src/images/icons/calculadora.ico"
+      href="./src/images/icons/calculadora.ico"
       type="image/x-icon"
     />
+
     <title>Calculadora</title>
 
     <!-- EXTERNAL -->
@@ -16,55 +17,51 @@
       crossorigin="anonymous"
       defer
     ></script>
+
     <!-- CSS -->
-    <link rel="stylesheet" href="src/styles/reset.css" />
-    <link rel="stylesheet" href="src/styles/index.css" />
-    <link rel="stylesheet" href="src/styles/home.css" />
+    <link rel="stylesheet" href="./src/styles/global/index.css" />
   </head>
+
   <body>
-    <main class="mainMenu">
-      <a href="./src/pages/calc.html" target="_self" class="mainMenu__link"
-        >Calculadora</a
+    <main class="homePage__container">
+      <a href="./calc.html" target="_self" class="homePage__link"
+        ><i class="fa-solid fa-calculator"></i>Calculadora</a
       >
-      <a href="./src/pages/media.html" target="_self" class="mainMenu__link"
-        >Média</a
+      <a href="./media.html" target="_self" class="homePage__link">Média</a>
+      <a href="./imc.html" target="_self" class="homePage__link"
+        ><i class="fa-solid fa-weight-scale"></i>IMC</a
       >
-      <a href="./src/pages/imc.html" target="_self" class="mainMenu__link"
-        >IMC</a
+      <a href="./pitagoras.html" target="_self" class="homePage__link"
+        ><i class="fa-solid fa-shapes"></i>Pitágoras</a
       >
-      <a
-        href="./src/pages/pitagoras.html"
-        target="_self"
-        class="mainMenu__link"
-        >Pitágoras</a
-      >
-      <a href="./src/pages/area.html" target="_self" class="mainMenu__link"
-        >Area</a
+      <a href="./area.html" target="_self" class="homePage__link"
+        ><i class="fa-solid fa-vector-square"></i>Area</a
       >
     </main>
-    <footer>
-      <section>
+    <footer class="homePage__footer">
+      <div>
         <p>
-          &copy; 2024 por João Victor Carvalho de Souza. Todos os direitos reservados.<br />Este
-          site é destinado a fins educacionais e não é comercializado.
+          &copy; 2024 por João Victor Carvalho de Souza. Todos os direitos
+          reservados.<br />Este site é destinado a fins educacionais e não é
+          comercializado.
         </p>
-      </section>
-      <section>
+      </div>
+      <div>
         <a
           href="https://github.com/0Carvalh0"
-          class="footer__link-social"
+          class="footer__linkSocialMedia"
           target="_blank"
           rel="external"
           ><i class="fa-brands fa-github"></i>GitHub</a
         >
         <a
           href="https://www.linkedin.com/in/jo%C3%A3o-victor-carvalho-de-souza-806347244/"
-          class="footer__link-social"
+          class="footer__linkSocialMedia"
           target="_blank"
           rel="external"
           ><i class="fa-brands fa-linkedin"></i>LinkedIn</a
         >
-      </section>
+      </div>
     </footer>
   </body>
 </html>

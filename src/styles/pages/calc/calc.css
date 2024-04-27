@@ -1,0 +1,89 @@
+.mainContainer__calc {
+  width: 100vw;
+  max-width: 328px;
+  border-radius: 2rem;
+  background: #1d1d1d linear-gradient(135deg, #1d1d1d, #4d4d4d, #1d1d1d);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mainContainer__calc button, .mainContainer__display {
+  font-family: var(--calculatorFont);
+}
+
+.mainContainer__display {
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+  color: var(--color2);
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.mainContainer__display .mainContainer__display-current {
+  font-size: 4rem;
+}
+
+.mainContainer__display .mainContainer__display-prev {
+  font-size: 3rem;
+  opacity: 0.6;
+}
+
+.mainContainer__calcKeyboard {
+  width: 100%;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  gap: 0.8rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.mainContainer__calcKeyboard .key {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  font-size: 2.5rem;
+  background: transparent;
+  color: var(--color1);
+  box-shadow: var(--boxShadowButton);
+  border: 2px outset var(--color5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all ease-out 0.2s;
+}
+
+.key .fa-solid {
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+
+.key[onclick="calc()"] {
+  grid-row-start: 4;
+  grid-row-end: 6;
+  grid-column-start: 4;
+  height: 100%;
+  border-radius: 50rem;
+  background: linear-gradient(135deg, var(--color3), var(--color4));
+}
+
+.key[onclick="addValue('0')"] {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100%;
+  border-radius: 100rem;
+  background: linear-gradient(135deg, var(--color3), var(--color4));
+}
+
+.mainContainer__calcKeyboard .key::-moz-selection {
+  background-color: transparent;
+}
+
+.mainContainer__calcKeyboard .key::selection {
+  background-color: transparent;
+}/*# sourceMappingURL=calc.css.map */
