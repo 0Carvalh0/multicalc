@@ -1,3 +1,7 @@
+@font-face {
+  font-family: calculator;
+  src: url(../../fonts/Calculator.ttf);
+}
 .mainContainer__calc {
   width: 100vw;
   max-width: 328px;
@@ -10,14 +14,14 @@
 }
 
 .mainContainer__calc button, .mainContainer__display {
-  font-family: var(--calculatorFont);
+  font-family: calculator, monospace;
 }
 
 .mainContainer__display {
   height: 150px;
   width: 100%;
   overflow: hidden;
-  color: var(--color2);
+  color: #b4c5e4;
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
@@ -50,9 +54,9 @@
   place-items: center;
   font-size: 2.5rem;
   background: transparent;
-  color: var(--color1);
-  box-shadow: var(--boxShadowButton);
-  border: 2px outset var(--color5);
+  color: #fbfff1;
+  box-shadow: 3px 3px 8px rgb(0, 0, 0), -3px -3px 8px #3c3744;
+  border: 2px outset #3c3744;
   border-radius: 50%;
   cursor: pointer;
   transition: all ease-out 0.2s;
@@ -69,7 +73,7 @@
   grid-column-start: 4;
   height: 100%;
   border-radius: 50rem;
-  background: linear-gradient(135deg, var(--color3), var(--color4));
+  background: linear-gradient(135deg, #3d52d5, #090c9b);
 }
 
 .key[onclick="addValue('0')"] {
@@ -77,7 +81,7 @@
   grid-column-end: 3;
   width: 100%;
   border-radius: 100rem;
-  background: linear-gradient(135deg, var(--color3), var(--color4));
+  background: linear-gradient(135deg, #3d52d5, #090c9b);
 }
 
 .mainContainer__calcKeyboard .key::-moz-selection {

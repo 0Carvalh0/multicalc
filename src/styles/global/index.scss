@@ -5,15 +5,16 @@
 @import "./variables";
 @import "./functions";
 
-@import "../pages/home/home.scss";
-@import "../pages/calc/calc.scss";
-@import "../pages/average/average.scss";
-@import "../pages/bmi/bmi.scss";
-@import "../pages/pitagoras/pitagoras.scss";
-@import "../pages/area/area.scss";
+@import "../pages/home/home.css";
+@import "../pages/calc/calc.css";
+@import "../pages/average/average.css";
+@import "../pages/bmi/bmi.css";
+@import "../pages/pitagoras/pitagoras.css";
+@import "../pages/area/area.css";
 
 body {
   min-height: 100vh;
+  font-family: $defaultFont;
 }
 
 .mainContainer__returnButton {
@@ -26,11 +27,11 @@ body {
   display: grid;
   place-items: center;
 
-  color: var(--color1);
+  color: $color1;
 
   padding: 0.5rem;
   border-radius: 50%;
-  box-shadow: var(--boxShadowButton);
+  box-shadow: $boxShadowButton;
 
   transition: all ease 0.2s;
 }
