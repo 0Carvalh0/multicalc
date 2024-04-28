@@ -5,97 +5,101 @@
 .mainContainer__calc {
   width: 100vw;
   max-width: 328px;
-  border-radius: 2rem;
-  
+  border-radius: 8px;
+
   background: #1d1d1d linear-gradient(135deg, #1d1d1d, #4d4d4d, #1d1d1d);
-  
+  box-shadow: $boxShadowButton;
+
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  overflow: hidden;
-}
 
-.mainContainer__calc button, .mainContainer__display {
-  font-family: $calculatorFont
-}
-
-.mainContainer__display {
-  height: 150px;
-  width: 100%;
   overflow: hidden;
 
-  color: $color2;
+  .key,
+  .mainContainer__display {
+    font-family: $calculatorFont;
+  }
 
-  padding: 1rem 2rem;
+  .mainContainer__display {
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-around;
-}
+    color: $color2;
 
-.mainContainer__display .mainContainer__display-current {
-  font-size: 4rem;
-}
+    padding: 8px 16px;
 
-.mainContainer__display .mainContainer__display-prev {
-  font-size: 3rem;
-  opacity: 0.6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+
+    .mainContainer__displayCurrent {
+      font-size: 4rem;
+    }
+
+    .mainContainer__displayPrev {
+      font-size: 3rem;
+      opacity: 0.7;
+    }
+  }
 }
 
 .mainContainer__calcKeyboard {
   width: 100%;
-  padding: 1rem;
+  padding: 8px;
 
-  display: grid;
-  place-items: center;
-  gap: .8rem;
+  @include gridCenter;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-}
 
-.mainContainer__calcKeyboard .key {
-  width: 52px;
-  height: 52px;
+  gap: 8px;
 
-  display: grid;
-  place-items: center;
+  .key {
+    width: 52px;
+    height: 52px;
 
-  font-size: 2.5rem;
-  background: transparent;
-  color: $color1;
+    @include gridCenter;
 
-  box-shadow: $boxShadowButton;
-  border: 2px outset $color5;
-  border-radius: 50%;
+    font-size: 2.5rem;
+    background: transparent;
+    color: $color1;
 
-  cursor: pointer;
-  transition: all ease-out 0.2s;
-}
+    box-shadow: $boxShadowButton;
+    border: none;
+    border-radius: 50%;
 
-.key .fa-solid {
-  font-size: 1.5rem;
-  pointer-events: none;
-}
+    cursor: pointer;
+    transition: all ease 0.2s;
 
-.key[onclick="calc()"] {
-  grid-row-start: 4;
-  grid-row-end: 6;
-  grid-column-start: 4;
-  height: 100%;
-  border-radius: 50rem;
+    .fa-solid {
+      font-size: 1.5rem;
+      pointer-events: none;
+    }
 
-  background: linear-gradient(135deg, $color3, $color4);
-}
+    &::selection {
+      background-color: transparent;
+    }
+  }
 
-.key[onclick="addValue('0')"] {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  width: 100%;
-  border-radius: 100rem;
+  .key[onclick="calc()"] {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 4;
 
-  background: linear-gradient(135deg, $color3, $color4);
-}
+    height: 100%;
+    border-radius: 100rem;
 
-.mainContainer__calcKeyboard .key::selection {
-  background-color: transparent;
+    background: $color3;
+  }
+
+  .key[onclick="addValue('0')"] {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+    width: 100%;
+    border-radius: 100rem;
+
+    background: $color3;
+  }
 }

@@ -17,21 +17,30 @@ body {
   font-family: $defaultFont;
 }
 
+.mainContainer {
+  min-height: 100vh;
+
+  @include flexCenter;
+
+  background: $color4;
+}
+
 .mainContainer__returnButton {
   text-decoration: none;
   position: fixed;
   z-index: 999;
-  left: 1rem;
-  top: 1rem;
 
-  display: grid;
-  place-items: center;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
 
-  color: $color1;
+  @include gridCenter;
 
-  padding: 0.5rem;
+  padding: 8px;
   border-radius: 50%;
+  
   box-shadow: $boxShadowButton;
+  color: $color1;
 
   transition: all ease 0.2s;
 }

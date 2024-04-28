@@ -1,9 +1,7 @@
-const res = document.querySelector(".mainContainer__display-current");
+const res = document.querySelector(".mainContainer__displayCurrent");
 
 function addValue(num) {
-  let text = document.querySelector(
-    ".mainContainer__display-current"
-  ).innerHTML;
+  let text = document.querySelector(".mainContainer__displayCurrent").innerHTML;
 
   if (text === "") {
     let operations = /[\+\-\*\/\.]$/;
@@ -34,22 +32,18 @@ function addValue(num) {
 
 function clear() {
   res.innerHTML = "";
-  document.querySelector(".mainContainer__display-prev").innerHTML = "";
+  document.querySelector(".mainContainer__displayPrev").innerHTML = "";
 }
 
 function del() {
-  let text = document.querySelector(
-    ".mainContainer__display-current"
-  ).innerHTML;
+  let text = document.querySelector(".mainContainer__displayCurrent").innerHTML;
   res.innerHTML = text.substring(0, text.length - 1);
 }
 
 function calc() {
-  let text = document.querySelector(
-    ".mainContainer__display-current"
-  ).innerHTML;
+  let text = document.querySelector(".mainContainer__displayCurrent").innerHTML;
   if (text) {
-    document.querySelector(".mainContainer__display-prev").innerHTML = text;
+    document.querySelector(".mainContainer__displayPrev").innerHTML = text;
     res.innerHTML = eval(text);
   }
 }
