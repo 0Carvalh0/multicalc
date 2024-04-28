@@ -1,9 +1,9 @@
 const res = document.querySelector("#res");
-const formNumero = document.querySelector("#inputForm__number");
+const formNumero = document.querySelector("#form__inputNumber");
 const btnAdicionar = document.querySelector("#add_button");
 const btnEliminar = document.querySelector("#remove__button");
 const btnCalcular = document.querySelector("#calc__button");
-const tabelaValores = document.querySelector("#main-container__averageList");
+const tabelaValores = document.querySelector("#mainContainer__averageList");
 let listaMedia = [];
 
 // FUNÇÕES
@@ -13,7 +13,8 @@ function add() {
   if (formNumero.value === "") {
     window.alert("[ERRO] Digite um valor para adicionar a média!");
   } else {
-    document.querySelector("#tabela").style.display = "flex";
+    document.querySelector("#mainContainer__averageContainer").style.display =
+      "flex";
     listaMedia.push(formNumero.value);
     li.innerHTML = `${formNumero.value} Adicionado`;
     formNumero.value = "";
@@ -31,7 +32,8 @@ function remove() {
   tabelaValores.removeChild(tabelaValores.lastChild);
 
   if (listaMedia.length <= 0) {
-    document.querySelector("#tabela").style.display = "none";
+    document.querySelector("#mainContainer__averageContainer").style.display =
+      "none";
   }
 
   if (res.style.display === "flex") {

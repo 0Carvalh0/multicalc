@@ -1,3 +1,19 @@
 @import "../../global/fonts";
 @import "../../global/variables";
 @import "../../global/functions";
+
+#mainContainer__averageContainer {
+  width: 100vw;
+  max-width: 328px;
+
+  border-radius: 8px;
+
+  background: #1d1d1d linear-gradient(135deg, #1d1d1d, #4d4d4d, #1d1d1d);
+  box-shadow: $boxShadowButton;
+
+  display: none;
+  flex-flow: column wrap;
+  align-items: center;
+
+  overflow: hidden;
+}

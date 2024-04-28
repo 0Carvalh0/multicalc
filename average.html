@@ -5,51 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="../images/icons/calculadora.ico"
+      href="./src/images/icons/calculadora.ico"
       type="image/x-icon"
     />
     <title>Calculadora</title>
 
     <link rel="stylesheet" href="./src/styles/global/index.css" />
+
     <script
       src="https://kit.fontawesome.com/9bfb2428d0.js"
       crossorigin="anonymous"
       defer
     ></script>
+
+    <script src="./src/scripts/average.js" defer></script>
   </head>
 
   <body>
-    <main class="main-container">
-      <a
-        class="fa-solid fa-arrow-left main-container__return-button"
-        href="../../index.html"
-        target="_self"
-      ></a>
-      <form method="get" class="main-container__form">
+    <a
+      class="fa-solid fa-home returnButton"
+      href="./index.html"
+      target="_self"
+    ></a>
+
+    <main class="mainContainer">
+      <form method="get" class="mainContainer__form">
         <input
           type="number"
-          name="inputForm__number"
-          id="inputForm__number"
+          name="form__inputNumber"
+          id="form__inputNumber"
           required
           placeholder="Digite um valor para fazer a média..."
         />
 
-        <section id="main-container__buttonContainer">
+        <section id="mainContainer__buttonContainer">
           <input
             type="button"
             onclick="add()"
+            class="mainContainer__button"
             id="add__Button"
             value="Adicionar"
           />
           <input
             type="button"
             onclick="remove()"
+            class="mainContainer__button"
             id="remove__Button"
             value="Remover"
           />
           <input
             type="button"
             onclick="media()"
+            class="mainContainer__button"
             id="calc__Button"
             value="Calcular"
           />
@@ -58,12 +65,10 @@
         <div id="res"></div>
       </form>
 
-      <section id="main-container__averageContainer">
+      <section id="mainContainer__averageContainer">
         <h2>Valores para calculo de média</h2>
-        <ul id="main-container__averageList"></ul>
+        <ul id="mainContainer__averageList"></ul>
       </section>
     </main>
-
-    <script src="../scripts/media.js"></script>
   </body>
 </html>

@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../global/_fonts.scss","average.css"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,oCAAA;ACCF","file":"average.css"}
+{"version":3,"sources":["../../global/_fonts.scss","average.css","average.scss","../../global/_variables.scss"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,oCAAA;ACCF;ACCA;EACE,YAAA;EACA,gBAAA;EAEA,kBAAA;EAEA,sEAAA;EACA,2DCFgB;EDIhB,aAAA;EACA,sBAAA;EACA,mBAAA;EAEA,gBAAA;ADHF","file":"average.css"}

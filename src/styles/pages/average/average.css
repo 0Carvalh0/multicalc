@@ -1,4 +1,15 @@
 @font-face {
   font-family: calculator;
   src: url(../../fonts/Calculator.ttf);
+}
+#mainContainer__averageContainer {
+  width: 100vw;
+  max-width: 328px;
+  border-radius: 8px;
+  background: #1d1d1d linear-gradient(135deg, #1d1d1d, #4d4d4d, #1d1d1d);
+  box-shadow: 3px 3px 8px rgb(0, 0, 0), -3px -3px 8px #3c3744;
+  display: none;
+  flex-flow: column wrap;
+  align-items: center;
+  overflow: hidden;
 }/*# sourceMappingURL=average.css.map */

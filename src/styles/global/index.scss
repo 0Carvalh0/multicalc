@@ -21,11 +21,52 @@ body {
   min-height: 100vh;
 
   @include flexCenter;
+  flex-flow: column wrap;
+
+  gap: 16px;
 
   background: $color4;
+
+  .mainContainer__form {
+    width: 100vw;
+    max-width: 328px;
+
+    border-radius: 8px;
+    padding: 8px;
+    gap: 8px;
+
+    background: #1d1d1d linear-gradient(135deg, #1d1d1d, #4d4d4d, #1d1d1d);
+    box-shadow: $boxShadowButton;
+
+    @include flexCenter;
+    flex-flow: column wrap;
+
+    overflow: hidden;
+
+    #form__inputNumber {
+      width: 100%;
+
+      border-radius: 100rem;
+      border: 2px solid $color3;
+      padding: 8px;
+    }
+
+    .mainContainer__button {
+      padding: 8px;
+      border-radius: 100rem;
+      border: 2px solid $color3;
+
+      box-shadow: $boxShadowButton;
+      color: $color1;
+
+      &:last-child {
+        background: $color3;
+      }
+    }
+  }
 }
 
-.mainContainer__returnButton {
+.returnButton {
   text-decoration: none;
   position: fixed;
   z-index: 999;
@@ -38,7 +79,7 @@ body {
 
   padding: 8px;
   border-radius: 50%;
-  
+
   box-shadow: $boxShadowButton;
   color: $color1;
 
