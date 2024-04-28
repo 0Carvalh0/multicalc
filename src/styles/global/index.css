@@ -23,7 +23,7 @@ body {
   gap: 16px;
   background: #090c9b;
 }
-.mainContainer .mainContainer__form {
+.mainContainer .mainContainer__Container {
   width: 100vw;
   max-width: 328px;
   border-radius: 8px;
@@ -41,7 +41,9 @@ body {
   width: 100%;
   border-radius: 100rem;
   border: 2px solid #3d52d5;
+  box-shadow: 3px 3px 8px rgb(0, 0, 0), -3px -3px 8px #3c3744;
   padding: 8px;
+  color: #fbfff1;
 }
 .mainContainer .mainContainer__form .mainContainer__button {
   padding: 8px;
