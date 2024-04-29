@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="../images/icons/calculadora.ico"
+      href="./src/images/icons/calculadora.ico"
       type="image/x-icon"
     />
     <title>Calculadora</title>
@@ -14,56 +14,42 @@
     
     <script
       src="https://kit.fontawesome.com/9bfb2428d0.js"
-      crossorigin="anonymous"
+      crossorigin="anonymous" defer
     ></script>
+
+    <script src="src/scripts/pitagoras.js" defer></script>
   </head>
 
   <body>
-    <header class="header">
-      <aside class="header__menuhamburguer">
-        <span class="fa-solid fa-bars" id="btn__menuhamburguer"></span>
+    <a
+      class="fa-solid fa-home returnButton"
+      href="./index.html"
+      target="_self"
+    ></a>
 
-        <ul id="lista__menu">
-          <div>
-            <a href="../../index.html"><li>Calculadora Simples</li></a>
-            <a href="./imc.html"><li>IMC</li></a>
-            <a href="./media.html"><li>Média Aritmética</li></a>
-            <a href="./pitagoras.html"><li>Pitágoras</li></a>
-            <a href="./area.html"><li>Áreas de Figuras Planas</li></a>
-          </div>
-          <div id="relogio">00:00</div>
-        </ul>
-      </aside>
-    </header>
-
-    <main>
-      <form method="get">
-        <div>
-          <div>
-            <label for="cateto1">Cateto 1:</label>
+    <main class="mainContainer">
+      <form method="get" class="mainContainer__form mainContainer__Container">
             <input
               type="number"
-              name="cateto1"
+              name="form__inputNumber"
               id="iform__cateto1"
+              class="form__inputNumber"
               required
               placeholder="Digite um dos catetos..."
             />
-          </div>
-          <div>
-            <label for="altura">Cateto 2:</label>
             <input
               type="number"
-              name="cateto2"
+              name="form__inputNumber"
               id="iform__cateto2"
+              class="form__inputNumber"
               required
               placeholder="Digite o outro cateto..."
             />
-          </div>
-        </div>
 
         <input
           type="button"
           onclick="pitagoras()"
+          class="mainContainer__button"
           id="calc__botao"
           value="Calcular"
         />
@@ -71,8 +57,5 @@
         <div id="res"></div>
       </form>
     </main>
-
-    <script src="../scripts/pitagoras.js"></script>
-    <script src="../scripts/sidebar.js"></script>
   </body>
 </html>

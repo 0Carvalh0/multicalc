@@ -11,61 +11,48 @@
     <title>Calculadora</title>
 
     <link rel="stylesheet" href="./src/styles/global/index.css" />
+
     <script
       src="https://kit.fontawesome.com/9bfb2428d0.js"
       crossorigin="anonymous"
       defer
     ></script>
+
+    <script src="./src/scripts/bmi.js" defer></script>
   </head>
 
   <body>
-    <header class="header">
-      <aside class="header__menuhamburguer">
-        <span class="fa-solid fa-bars" id="btn__menuhamburguer"></span>
+    <a
+      class="fa-solid fa-home returnButton"
+      href="./index.html"
+      target="_self"
+    ></a>
 
-        <ul id="lista__menu">
-          <div>
-            <a href="../../index.html"><li>Calculadora Simples</li></a>
-            <a href="./imc.html"><li>IMC</li></a>
-            <a href="./media.html"><li>Média Aritmética</li></a>
-            <a href="./pitagoras.html"><li>Pitágoras</li></a>
-            <a href="./area.html"><li>Áreas de Figuras Planas</li></a>
-          </div>
-          <div id="relogio">00:00</div>
-        </ul>
-      </aside>
-    </header>
-
-    <main>
-      <form method="get">
-        <div>
-          <div>
-            <label for="peso">Peso:</label>
-            <input
-              type="number"
-              name="peso"
-              id="iform__peso"
-              required
-              placeholder="Digite seu peso..."
-              maxlength="5"
-            />
-          </div>
-          <div>
-            <label for="altura">Altura:</label>
-            <input
-              type="number"
-              name="altura"
-              id="iform__altura"
-              required
-              placeholder="Digite sua altura..."
-              maxlength="3"
-            />
-          </div>
-        </div>
+    <main class="mainContainer">
+      <form method="get" class="mainContainer__form mainContainer__Container">
+        <input
+          type="number"
+          name="form__inputNumber"
+          id="form__inputWeight"
+          class="form__inputNumber"
+          required
+          placeholder="Digite seu peso..."
+          maxlength="5"
+        />
+        <input
+          type="number"
+          name="form__inputNumber"
+          id="form__inputHeight"
+          class="form__inputNumber"
+          required
+          placeholder="Digite sua altura..."
+          maxlength="3"
+        />
 
         <input
           type="button"
-          onclick="imc()"
+          onclick="bmi()"
+          class="mainContainer__button"
           id="calc__botao"
           value="Calcular"
         />
@@ -74,46 +61,35 @@
 
         <table>
           <thead>
-            <tr id="linha__Titulo">
-              <th scope="col" colspan="3" id="table__Titulo">VEJA O SEU IMC</th>
-            </tr>
+            <h1 scope="col" id="table__Title">VEJA O SEU IMC</h1>
             <tr>
-              <th scope="col" class="table__col-Titulo">IMC</th>
-              <th
-                scope="col"
-                class="table__col-Titulo"
-                style="
-                  border-left: 2px solid var(--cor1);
-                  border-right: 2px solid var(--cor1);
-                "
-              >
-                CLASSIFICAÇÃO
-              </th>
-              <th scope="col" class="table__col-Titulo">OBESIDADE (GRAU)</th>
+              <th scope="col" class="table__colTitle">IMC</th>
+              <th scope="col" class="table__colTitle">CLASSIFICAÇÃO</th>
+              <th scope="col" class="table__colTitle">OBESIDADE (GRAU)</th>
             </tr>
           </thead>
           <tbody>
-            <tr id="linha1">
+            <tr id="row1">
               <td>MENOR QUE 18,5</td>
               <td>MAGREZA</td>
               <td>0</td>
             </tr>
-            <tr id="linha2">
+            <tr id="row2">
               <td>ENTRE 18,5 E 24,9</td>
               <td>NORMAL</td>
               <td>0</td>
             </tr>
-            <tr id="linha3">
+            <tr id="row3">
               <td>ENTRE 25,0 E 29,9</td>
               <td>SOBREPESO</td>
               <td>I</td>
             </tr>
-            <tr id="linha4">
+            <tr id="row4">
               <td>ENTRE 30,0 E 39,9</td>
               <td>OBESIDADE</td>
               <td>II</td>
             </tr>
-            <tr id="linha5">
+            <tr id="row5">
               <td>MAIOR QUE 40,0</td>
               <td>OBESIDADE GRAVE</td>
               <td>III</td>
@@ -122,8 +98,5 @@
         </table>
       </form>
     </main>
-
-    <script src="../scripts/imc.js"></script>
-    <script src="../scripts/sidebar.js"></script>
   </body>
 </html>

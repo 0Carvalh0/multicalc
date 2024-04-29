@@ -25,7 +25,7 @@ body {
 
   gap: 16px;
 
-  background: $color4;
+  background: $color5;
 
   .mainContainer__Container {
     width: 100vw;
@@ -44,7 +44,7 @@ body {
   }
 
   .mainContainer__form {
-    #form__inputNumber {
+    .form__inputNumber {
       width: 100%;
 
       border-radius: 100rem;
@@ -66,6 +66,9 @@ body {
       &:last-child {
         background: $color3;
       }
+    }
+    #res {
+      color: #fff;
     }
   }
 }

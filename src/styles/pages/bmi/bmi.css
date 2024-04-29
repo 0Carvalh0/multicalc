@@ -1,4 +1,7 @@
 @font-face {
   font-family: calculator;
   src: url(../../fonts/Calculator.ttf);
+}
+table * {
+  color: #fff;
 }/*# sourceMappingURL=bmi.css.map */
