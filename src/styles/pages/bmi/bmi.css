@@ -2,6 +2,22 @@
   font-family: calculator;
   src: url(../../fonts/Calculator.ttf);
 }
+table {
+  width: 100%;
+}
 table * {
   color: #fff;
+}
+table tbody {
+  display: flex;
+  flex-flow: column wrap;
+}
+table tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+table tr td, table tr th {
+  width: 50%;
+  text-align: center;
 }/*# sourceMappingURL=bmi.css.map */

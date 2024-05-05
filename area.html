@@ -5,51 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="../images/icons/calculadora.ico"
+      href="./src/images/icons/calculadora.ico"
       type="image/x-icon"
     />
     <title>Calculadora</title>
 
     <link rel="stylesheet" href="./src/styles/global/index.css" />
+
     <script
       src="https://kit.fontawesome.com/9bfb2428d0.js"
-      crossorigin="anonymous"
+      crossorigin="anonymous" defer
     ></script>
+
+    <script src="./src/scripts/areasScripts/retangulo.js" defer></script>
+    <script src="./src/scripts/areasScripts/circulo.js" defer></script>
   </head>
 
   <body>
-    <header class="header">
-      <aside class="header__menuhamburguer">
-        <span class="fa-solid fa-bars" id="btn__menuhamburguer"></span>
-
-        <ul id="lista__menu">
-          <div>
-            <a href="../../index.html"><li>Calculadora Simples</li></a>
-            <a href="./imc.html"><li>IMC</li></a>
-            <a href="./media.html"><li>Média Aritmética</li></a>
-            <a href="./pitagoras.html"><li>Pitágoras</li></a>
-            <a href="./area.html"><li>Áreas de Figuras Planas</li></a>
-          </div>
-          <div id="relogio">00:00</div>
-        </ul>
-      </aside>
-    </header>
-
-    <main>
+    <main class="mainContainer">
       <div class="main__Botoes">
         <a href="./areasPages/retangulo.html" target="areaIframe">Retângulo</a>
         <a href="./areasPages/circulo.html" target="areaIframe">Circulo</a>
       </div>
-
-      <iframe
-        src="./areasPages/retangulo.html"
-        frameborder="0"
-        referrerpolicy="no-referrer"
-        id="main__Iframe"
-        name="areaIframe"
-      ></iframe>
     </main>
-
-    <script src="../scripts/sidebar.js"></script>
   </body>
 </html>
