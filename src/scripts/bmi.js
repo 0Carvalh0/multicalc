@@ -8,7 +8,7 @@ function bmi() {
   const row3 = document.querySelector("#row3");
   const row4 = document.querySelector("#row4");
   const row5 = document.querySelector("#row5");
-  let bmires = weightValue / heightValue ** 2;
+  let bmires = heightValue / weightValue ** 2;
 
   row1.style.backgroundColor = "transparent";
   row2.style.backgroundColor = "transparent";
