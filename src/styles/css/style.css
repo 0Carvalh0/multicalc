@@ -1,0 +1,329 @@
+button,
+input,
+a {
+  all: unset;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+and,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+textarea,
+select {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/*blockquote, q {
+	quotes:none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content:none;
+}*/
+del {
+  text-decoration: line-through;
+}
+
+hr {
+  background: transparent;
+  border: 0;
+  clear: both;
+  color: transparent;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+mark {
+  background-color: #ffffb3;
+  font-style: italic;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+ins {
+  background-color: red;
+  color: white;
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: calculator;
+  src: url(../../fonts/Calculator.ttf);
+}
+header {
+  width: 100%;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2509803922);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+header h1 span {
+  font-weight: bold;
+  color: #d45039;
+}
+header img {
+  width: 100px;
+  height: 100px;
+  transform: rotate(15deg);
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  background-color: #551B1B;
+  color: #f9f9f9;
+}
+
+.mainContainer__calc {
+  width: 100vw;
+  max-width: 328px;
+  border-radius: 8px;
+  background: #1d1d1d linear-gradient(135deg, #1d1d1d, #4d4d4d, #1d1d1d);
+  box-shadow: 2px 2px 10px #000;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  overflow: hidden;
+}
+.mainContainer__calc .key,
+.mainContainer__calc .mainContainer__display {
+  font-family: calculator, monospace;
+}
+.mainContainer__calc .mainContainer__display {
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+  color: #f29f00;
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.mainContainer__calc .mainContainer__display .mainContainer__displayCurrent {
+  font-size: 4rem;
+}
+.mainContainer__calc .mainContainer__display .mainContainer__displayPrev {
+  font-size: 3rem;
+  opacity: 0.7;
+}
+
+.mainContainer__calcKeyboard {
+  width: 100%;
+  padding: 8px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px;
+}
+.mainContainer__calcKeyboard .key {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  font-size: 2.5rem;
+  background: transparent;
+  color: #d45039;
+  box-shadow: 2px 2px 10px #000;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+.mainContainer__calcKeyboard .key .fa-solid {
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+.mainContainer__calcKeyboard .key::selection {
+  background-color: transparent;
+}
+.mainContainer__calcKeyboard .key[onclick="calc()"] {
+  grid-row-start: 4;
+  grid-row-end: 6;
+  grid-column-start: 4;
+  height: 100%;
+  border-radius: 100rem;
+  background: #3a6a9a;
+}
+.mainContainer__calcKeyboard .key[onclick="addValue('0')"] {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100%;
+  border-radius: 100rem;
+  background: #3a6a9a;
+}
+
+#mainContainer__averageContainer {
+  width: 100vw;
+  max-width: 328px;
+  border-radius: 8px;
+  background: #1d1d1d linear-gradient(135deg, #1d1d1d, #4d4d4d, #1d1d1d);
+  color: #d45039;
+  box-shadow: 2px 2px 10px #000;
+  display: none;
+  flex-flow: column wrap;
+  align-items: center;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+}
+table * {
+  color: #fff;
+}
+table tbody {
+  display: flex;
+  flex-flow: column wrap;
+}
+table tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+table tr td, table tr th {
+  width: 50%;
+  text-align: center;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */

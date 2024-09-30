@@ -1,0 +1,16 @@
+#mainContainer__averageContainer {
+  width: 100vw;
+  max-width: 328px;
+
+  border-radius: 8px;
+
+  background: #1d1d1d linear-gradient(135deg, #1d1d1d, #4d4d4d, #1d1d1d);
+  color: $color1;
+  box-shadow: 2px 2px 10px #000;
+
+  display: none;
+  flex-flow: column wrap;
+  align-items: center;
+
+  overflow: hidden;
+}

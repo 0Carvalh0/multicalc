@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+// INFO: Importando variáveis
+@import "variables";
+// INFO: Importando mixins
+@import "mixins";
+// INFO: Importando reset
+@import "reset";
+
+@font-face {
+  font-family: calculator;
+  src: url(../../fonts/Calculator.ttf);
+}
+
+// INFO: Importando estilos de páginas
+@import "pages/home";
+@import "pages/calc";
+@import "pages/average";
+@import "pages/bmi";
+@import "pages/pitagoras";
+
+body {
+  min-height: 100vh;
+  font-family: $defaultFont;
+}

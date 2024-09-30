@@ -73,6 +73,12 @@ Contribuições são sempre bem-vindas! Se você tiver ideias para melhorar o pr
    git commit -m "Adicionando nova funcionalidade"
    ```
 
+Utilize o comando para alterações nos arquivos SASS:
+
+   ```bash
+   sass src/styles/scss/index.scss src/styles/css/style.css --watch
+   ```
+
 4. Envie suas alterações:
 
    ```bash

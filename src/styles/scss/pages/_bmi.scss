@@ -1,0 +1,23 @@
+table {
+  width: 100%;
+
+  * {
+    color: #fff;
+  }
+
+  tbody {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  tr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    td, th {
+      width: 50%;
+      text-align: center;
+    }
+  }
+}
