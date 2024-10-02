@@ -23,13 +23,126 @@
   </head>
 
   <body>
-    <header>
-      <h1>Multi<span>Calc</span></h1>
-      <img src="./src/images/MultiCalcLogo.png" alt="Logo MultiCalc">
+    <header class="header">
+      <h1 class="header__title">
+        Multi<span class="header__title--highlight">Calc</span>
+      </h1>
+      <img
+        src="./src/images/MultiCalcLogo.png"
+        alt="Logo MultiCalc"
+        class="header__logo"
+      />
     </header>
 
-    <footer>
-      <p>&copy; 2024 Multicalc. Todos os direitos reservados.</p>
+    <main class="menu">
+      <div class="menu__item">
+        <h2 class="menu__item-title">
+          Cálculos Básicos <i class="fa-solid fa-caret-down"></i>
+        </h2>
+        <ul class="menu__item-list">
+          <li class="menu__item-list-element">
+            <a href="./src/pages/calc.html"
+              >Soma, Subtração, Multiplicação, Divisão, Porcentagem</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu__item">
+        <h2 class="menu__item-title">
+          Cálculos Estatísticos <i class="fa-solid fa-caret-down"></i>
+        </h2>
+        <ul class="menu__item-list">
+          <li class="menu__item-list-element">
+            <a href="./src/pages/average.html">Média Aritmética</a>
+          </li>
+          <!-- <li class="menu__item-list-element">
+            <a href="#">Média Ponderada</a>
+          </li>
+          <li class="menu__item-list-element"><a href="#">Desvio Padrão</a></li> -->
+        </ul>
+      </div>
+
+      <!-- <div class="menu__item">
+        <h2 class="menu__item-title">
+          Cálculos Financeiros <i class="fa-solid fa-caret-down"></i>
+        </h2>
+        <ul class="menu__item-list">
+          <li class="menu__item-list-element"><a href="#">Juros Simples</a></li>
+          <li class="menu__item-list-element">
+            <a href="#">Juros Compostos</a>
+          </li>
+          <li class="menu__item-list-element">
+            <a href="#">Conversão de Moedas</a>
+          </li>
+        </ul>
+      </div> -->
+
+      <div class="menu__item">
+        <h2 class="menu__item-title">
+          Cálculos de Saúde <i class="fa-solid fa-caret-down"></i>
+        </h2>
+        <ul class="menu__item-list">
+          <li class="menu__item-list-element">
+            <a href="./src/pages/bmi.html">IMC</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu__item">
+        <h2 class="menu__item-title">
+          Cálculos Geométricos <i class="fa-solid fa-caret-down"></i>
+        </h2>
+        <ul class="menu__item-list">
+          <li class="menu__item-list-element">
+            <a href="./src/pages/pitagoras.html">Pitágoras</a>
+          </li>
+          <!-- <li class="menu__item-list-element">
+            <a href="#">Área e Perímetro</a>
+          </li> -->
+        </ul>
+      </div>
+
+      <!-- <div class="menu__item">
+        <h2 class="menu__item-title">
+          Cálculos Avançados <i class="fa-solid fa-caret-down"></i>
+        </h2>
+        <ul class="menu__item-list">
+          <li class="menu__item-list-element">
+            <a href="#">Equação Quadrática</a>
+          </li>
+          <li class="menu__item-list-element"><a href="#">Raiz Quadrada</a></li>
+          <li class="menu__item-list-element"><a href="#">Fatorial</a></li>
+        </ul>
+      </div> -->
+
+      <!-- <div class="menu__item">
+        <h2 class="menu__item-title">
+          Conversões <i class="fa-solid fa-caret-down"></i>
+        </h2>
+        <ul class="menu__item-list">
+          <li class="menu__item-list-element">
+            <a href="#">Conversão de Unidades</a>
+          </li>
+        </ul>
+      </div> -->
+
+      <!-- <div class="menu__item">
+        <h2 class="menu__item-title">
+          Cálculos de Distância <i class="fa-solid fa-caret-down"></i>
+        </h2>
+        <ul class="menu__item-list">
+          <li class="menu__item-list-element">
+            <a href="#">Distância entre pontos</a>
+          </li>
+        </ul>
+      </div> -->
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">
+        &copy; 2024 Multicalc. Todos os direitos reservados.
+      </p>
     </footer>
   </body>
 </html>

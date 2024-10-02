@@ -1,38 +1,159 @@
-header {
+.header {
   width: 100%;
+  background-color: $colorDarkSurface;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-  box-shadow: 0 2px 12px #00000040;
-
-  padding: 2rem;
-
-  @include flexCenter;
-
-  h1 {
+  .header__title {
     font-size: 2.5rem;
-    font-weight: normal;
+    font-weight: 300;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $colorTextPrimary;
 
-    span {
-        font-weight: bold;
-        color: $color1;
+    .header__title--highlight {
+      font-weight: 700;
+      color: $colorPrimary;
     }
   }
 
-  img {
-    @include logoSize(100px);
+  .header__logo {
+    width: 80px;
+    height: auto;
     transform: rotate(15deg);
+    transition: transform 0.3s ease;
+    filter: brightness(0.9) contrast(1.1);
+
+    &:hover {
+      transform: rotate(0deg);
+    }
   }
 }
 
-footer {
+.menu {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu__item {
+  width: 300px;
+  background-color: $colorDarkSurface;
+  border-radius: 15px;
+  padding: 25px;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background-color: $colorDarkHover;
+  }
+}
+
+.menu__item-title {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  color: $colorSecondary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: default;
+
+  i {
+    transition: transform 0.3s ease;
+    color: $colorAccent;
+  }
+}
+
+.menu__item-list {
+  list-style: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.menu__item-list-element {
+  background-color: darken($colorDarkSurface, 3%);
+  color: $colorTextSecondary;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+  &:hover {
+    color: $colorTextPrimary;
+  }
+  
+  a {
+    padding: 12px 15px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.menu__item:hover .menu__item-list {
+  max-height: 300px;
+}
+
+.menu__item:hover .menu__item-title i {
+  transform: rotate(180deg);
+}
+
+.footer {
+  width: 100%;
+  padding: 15px;
+  background-color: $colorDarkSurface;
+  color: $colorTextSecondary;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+// Estilos específicos para elementos interativos
+a,
+button {
+  color: $colorSecondary;
+  transition: color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: $colorPrimary;
+  }
+}
+
+// Media queries para responsividade
+@media (max-width: 768px) {
+  .menu {
+    padding: 40px 20px;
+  }
+
+  .menu__item {
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    max-width: 400px;
+  }
 
-    @include gridCenter;
+  .header {
+    flex-direction: column;
+    text-align: center;
 
-    padding: 8px;
-
-    background-color: #551B1B;
-    color: $colorwhite;
+    .header__logo {
+      margin-top: 1rem;
+    }
+  }
 }

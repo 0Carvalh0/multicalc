@@ -1,7 +1,7 @@
 {
-  "name": "megacalculadora",
-  "version": "1.0.0",
-  "description": "Meu primeiro projeto em desenvolvimento, calculadora com diversos calculos utilizando HTML5, CSS3 e JavaScript",
+  "name": "multicalc",
+  "version": "2.0.0",
+  "description": "Uma calculadora versátil e poderosa que realiza diversos tipos de cálculos, incluindo matemáticos, financeiros e científicos. Interface simples, fácil de usar e ideal para diferentes finalidades.",
   "main": "index.html",
   "directories": {
     "doc": "docs"

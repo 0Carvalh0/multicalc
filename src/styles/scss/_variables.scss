@@ -1,9 +1,26 @@
+// Fontes
 $defaultFont: Arial, Helvetica, sans-serif;
 $calculatorFont: calculator, monospace;
 
-$colorwhite: #f9f9f9;
-$colorblack: #4a4a4a;
-$color1: #d45039;
-$color2: #f29f00;
-$color3: #3a6a9a;
-$color4: #39d4d4;
+// Cores principais
+$colorPrimary: #d45039;    // Cor primária (mantida conforme solicitado)
+$colorSecondary: #2c7a7b;  // Verde azulado escuro, complementar ao vermelho
+$colorAccent: #ffd166;     // Amarelo suave para destaque
+
+// Tons de cinza para o tema escuro
+$colorDarkBg: #121212;     // Fundo escuro principal
+$colorDarkSurface: #1e1e1e; // Superfície ligeiramente mais clara
+$colorDarkHover: #2c2c2c;  // Cor para efeitos hover
+
+// Cores de texto
+$colorTextPrimary: #ffffff;   // Texto principal (branco)
+$colorTextSecondary: #b3b3b3; // Texto secundário (cinza claro)
+
+// Cores de estado
+$colorSuccess: #4caf50; // Verde para sucesso
+$colorWarning: #ff9800; // Laranja para avisos
+$colorError: #f44336;   // Vermelho para erros
+
+// Cores adicionais (se necessário)
+$colorBlue: #3a6a9a;    // Azul escuro
+$colorCyan: #39d4d4;    // Ciano (mantido da paleta original)
