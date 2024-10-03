@@ -1,16 +1,155 @@
-#mainContainer__averageContainer {
-  width: 100vw;
-  max-width: 328px;
-
-  border-radius: 8px;
-
-  background: #1d1d1d linear-gradient(135deg, #1d1d1d, #4d4d4d, #1d1d1d);
-  color: $color1;
-  box-shadow: 2px 2px 10px #000;
-
-  display: none;
-  flex-flow: column wrap;
+.average-calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: $colorDarkBg;
+  color: $colorTextPrimary;
 
-  overflow: hidden;
+  &__form {
+    background-color: $colorDarkSurface;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &__input {
+    width: calc(100% - (0.75rem * 2));
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid $colorDarkHover;
+    border-radius: 5px;
+    background-color: $colorDarkBg;
+    color: $colorTextPrimary;
+    font-size: 1rem;
+
+    &::placeholder {
+      color: $colorTextSecondary;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $colorSecondary;
+    }
+
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  &__button {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: $colorSecondary;
+    color: $colorTextPrimary;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: lighten($colorSecondary, 10%);
+    }
+
+    &--add {
+      background-color: $colorSuccess;
+      &:hover {
+        background-color: lighten($colorSuccess, 10%);
+      }
+    }
+
+    &--remove {
+      background-color: $colorError;
+      &:hover {
+        background-color: lighten($colorError, 10%);
+      }
+    }
+
+    &--calculate {
+      background-color: $colorPrimary;
+      &:hover {
+        background-color: lighten($colorPrimary, 10%);
+      }
+    }
+  }
+
+  &__result {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__values {
+    display: none;
+    flex-flow: column wrap;
+    background-color: $colorDarkSurface;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: $colorAccent;
+  }
+
+  &__list {
+    max-height: 250px;
+    overflow-y: auto;
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      background-color: $colorDarkHover;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+  }
+}
+
+.return-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: $colorSecondary;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $colorPrimary;
+  }
+}
+
+@media (max-width: 600px) {
+  .average-calculator {
+    padding: 1rem;
+
+    &__form,
+    &__values {
+      width: 100%;
+    }
+
+    &__controls {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
 }

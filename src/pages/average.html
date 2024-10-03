@@ -3,71 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="shortcut icon"
-      href="./src/images/icons/calculadora.ico"
+      href="../images/icons/favicon.ico"
       type="image/x-icon"
     />
-    <title>Calculadora</title>
+    <title>MultiCalc</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="../styles/css/style.css" />
 
+    <!-- BIBLIOTECAS -->
     <script
       src="https://kit.fontawesome.com/9bfb2428d0.js"
       crossorigin="anonymous"
       defer
     ></script>
 
-    <script src="./src/scripts/average.js" defer></script>
+    <!-- JAVASCRIPT -->
+    <script src="../js/components/average.js" defer></script>
   </head>
 
   <body>
-    <a
-      class="fa-solid fa-home returnButton"
-      href="./index.html"
-      target="_self"
-    ></a>
+    <a class="return-button" href="../../index.html" target="_self">
+      <i class="fa-solid fa-home"></i>
+    </a>
 
-    <main class="mainContainer">
-      <form method="get" class="mainContainer__form mainContainer__Container">
+    <main class="average-calculator">
+      <form method="get" class="average-calculator__form">
         <input
           type="number"
-          name="form__inputNumber"
-          class="form__inputNumber"
+          name="average-calculator__input"
+          class="average-calculator__input"
           required
           placeholder="Digite um valor para fazer a média..."
         />
 
-        <section id="mainContainer__buttonContainer">
-          <input
+        <section class="average-calculator__controls">
+          <button
             type="button"
             onclick="add()"
-            class="mainContainer__button"
-            id="add__Button"
-            value="Adicionar"
-          />
-          <input
+            class="average-calculator__button average-calculator__button--add"
+          >
+            Adicionar
+          </button>
+          <button
             type="button"
             onclick="remove()"
-            class="mainContainer__button"
-            id="remove__Button"
-            value="Remover"
-          />
-          <input
+            class="average-calculator__button average-calculator__button--remove"
+          >
+            Remover
+          </button>
+          <button
             type="button"
             onclick="media()"
-            class="mainContainer__button"
-            id="calc__Button"
-            value="Calcular"
-          />
+            class="average-calculator__button average-calculator__button--calculate"
+          >
+            Calcular
+          </button>
         </section>
 
-        <div id="res"></div>
+        <div class="average-calculator__result"></div>
       </form>
 
-      <section class="mainContainer__Container" id="mainContainer__averageContainer">
-        <h2>Valores para calculo de média</h2>
-        <ul id="mainContainer__averageList"></ul>
+      <section class="average-calculator__values">
+        <h2 class="average-calculator__title">Valores para cálculo de média</h2>
+        <ul class="average-calculator__list"></ul>
       </section>
     </main>
   </body>
