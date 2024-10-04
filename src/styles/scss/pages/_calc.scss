@@ -73,20 +73,6 @@
   }
 }
 
-.return-button {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  font-size: 24px;
-  color: $colorSecondary;
-  text-decoration: none;
-  transition: color 0.3s;
-
-  &:hover {
-    color: $colorPrimary;
-  }
-}
-
 // Responsividade
 @media (max-width: 400px) {
   .calculator {

@@ -1,23 +1,115 @@
-table {
-  width: 100%;
+.bmi-calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $colorDarkBg;
+  color: $colorTextPrimary;
+  padding: 2rem;
 
-  * {
-    color: #fff;
+  &__form {
+    background-color: $colorDarkSurface;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  tbody {
-    display: flex;
-    flex-flow: column wrap;
+  &__input {
+    width: calc(100% - (0.75rem * 2));
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid $colorDarkHover;
+    border-radius: 5px;
+    background-color: $colorDarkBg;
+    color: $colorTextPrimary;
+    font-size: 1rem;
+
+    &::placeholder {
+      color: $colorTextSecondary;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $colorSecondary;
+    }
   }
 
-  tr {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  &__button {
+    width: calc(100% - (0.75rem * 2));
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: $colorPrimary;
+    color: $colorTextPrimary;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 
-    td, th {
-      width: 50%;
+    &:hover {
+      background-color: lighten($colorPrimary, 10%);
+    }
+  }
+
+  &__result {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__table {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+
+    &-title {
+      font-size: 1.2rem;
+      font-weight: bold;
       text-align: center;
+      padding: 0.75rem;
+      background-color: $colorSecondary;
+      color: $colorTextPrimary;
+    }
+
+    &-header {
+      background-color: $colorDarkHover;
+      color: $colorTextPrimary;
+      padding: 0.75rem;
+      text-align: left;
+    }
+
+    &-row {
+      &:nth-child(even) {
+        background-color: rgba($colorDarkHover, 0.5);
+      }
+
+      td {
+        padding: 0.75rem;
+        border-bottom: 1px solid $colorDarkHover;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .bmi-calculator {
+    padding: 1rem;
+
+    &__form {
+      padding: 1rem;
+    }
+
+    &__table {
+      font-size: 0.9rem;
+
+      &-title,
+      &-header,
+      td {
+        padding: 0.5rem;
+      }
     }
   }
 }

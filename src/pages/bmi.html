@@ -3,88 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="shortcut icon"
-      href="../images/icons/calculadora.ico"
+      href="../images/icons/favicon.ico"
       type="image/x-icon"
     />
-    <title>Calculadora</title>
+    <title>MultiCalc</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="../styles/css/style.css" />
 
+    <!-- BIBLIOTECAS -->
     <script
       src="https://kit.fontawesome.com/9bfb2428d0.js"
       crossorigin="anonymous"
       defer
     ></script>
 
-    <script src="./src/scripts/bmi.js" defer></script>
+    <!-- JAVASCRIPT -->
+    <script src="../js/components/bmi.js" defer></script>
   </head>
 
   <body>
     <a
-      class="fa-solid fa-home returnButton"
-      href="./index.html"
+      class="return-button"
+      href="../../index.html"
       target="_self"
-    ></a>
+    >
+      <i class="fa-solid fa-home"></i>
+    </a>
 
-    <main class="mainContainer">
-      <form method="get" class="mainContainer__form mainContainer__Container">
+    <main class="bmi-calculator">
+      <form method="get" class="bmi-calculator__form">
         <input
           type="number"
-          name="form__inputNumber"
-          id="form__inputWeight"
-          class="form__inputNumber"
+          name="bmi-calculator__weight"
+          id="bmi-calculator__weight"
+          class="bmi-calculator__input"
           required
           placeholder="Digite seu peso..."
           maxlength="5"
         />
+
         <input
           type="number"
-          name="form__inputNumber"
-          id="form__inputHeight"
-          class="form__inputNumber"
+          name="bmi-calculator__height"
+          id="bmi-calculator__height"
+          class="bmi-calculator__input"
           required
           placeholder="Digite sua altura..."
           maxlength="3"
         />
 
-        <input
+        <button
           type="button"
           onclick="bmi()"
-          class="mainContainer__button"
-          id="calc__botao"
-          value="Calcular"
-        />
+          class="bmi-calculator__button"
+        >
+          Calcular
+        </button>
 
-        <div id="res"></div>
+        <div class="bmi-calculator__result"></div>
 
-        <table>
+        <table class="bmi-calculator__table">
           <thead>
-            <h1 scope="col" id="table__Title">VEJA O SEU IMC</h1>
             <tr>
-              <th scope="col" class="table__colTitle">IMC</th>
-              <th scope="col" class="table__colTitle">CLASSIFICAÇÃO</th>
+              <th colspan="2" class="bmi-calculator__table-title">VEJA O SEU IMC</th>
+            </tr>
+            <tr>
+              <th scope="col" class="bmi-calculator__table-header">IMC</th>
+              <th scope="col" class="bmi-calculator__table-header">CLASSIFICAÇÃO</th>
             </tr>
           </thead>
           <tbody>
-            <tr id="row1">
+            <tr class="bmi-calculator__table-row" id="row1">
               <td>MENOR QUE 18,5</td>
               <td>MAGREZA</td>
             </tr>
-            <tr id="row2">
+            <tr class="bmi-calculator__table-row" id="row2">
               <td>ENTRE 18,5 E 24,9</td>
               <td>NORMAL</td>
             </tr>
-            <tr id="row3">
+            <tr class="bmi-calculator__table-row" id="row3">
               <td>ENTRE 25,0 E 29,9</td>
               <td>SOBREPESO I</td>
             </tr>
-            <tr id="row4">
+            <tr class="bmi-calculator__table-row" id="row4">
               <td>ENTRE 30,0 E 39,9</td>
               <td>OBESIDADE II</td>
             </tr>
-            <tr id="row5">
+            <tr class="bmi-calculator__table-row" id="row5">
               <td>MAIOR QUE 40,0</td>
               <td>OBESIDADE III</td>
             </tr>

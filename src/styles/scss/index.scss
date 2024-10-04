@@ -16,7 +16,7 @@
 @import "pages/home";
 @import "pages/calc";
 @import "pages/average";
-// @import "pages/bmi";
+@import "pages/bmi";
 // @import "pages/pitagoras";
 
 body {
@@ -28,4 +28,18 @@ body {
   background-color: $colorDarkBg;
   font-family: $defaultFont;
   color: $colorTextPrimary;
+}
+
+.return-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: $colorSecondary;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $colorPrimary;
+  }
 }
