@@ -1,0 +1,139 @@
+.weightedAverage-calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: $colorDarkBg;
+  color: $colorTextPrimary;
+
+  &__form {
+    background-color: $colorDarkSurface;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &__input {
+    width: calc(100% - (0.75rem * 2));
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid $colorDarkHover;
+    border-radius: 5px;
+    background-color: $colorDarkBg;
+    color: $colorTextPrimary;
+    font-size: 1rem;
+
+    &::placeholder {
+      color: $colorTextSecondary;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $colorSecondary;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__button {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: $colorSecondary;
+    text-align: center;
+    color: $colorTextPrimary;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: lighten($colorSecondary, 10%);
+    }
+
+    &--add {
+      background-color: $colorSuccess;
+      &:hover {
+        background-color: lighten($colorSuccess, 10%);
+      }
+    }
+
+    &--remove {
+      background-color: $colorError;
+      &:hover {
+        background-color: lighten($colorError, 10%);
+      }
+    }
+
+    &--calculate {
+      background-color: $colorPrimary;
+      &:hover {
+        background-color: lighten($colorPrimary, 10%);
+      }
+    }
+  }
+
+  &__result {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: $colorAccent;
+  }
+
+  &__values {
+    display: none;
+    flex-flow: column wrap;
+    background-color: $colorDarkSurface;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: $colorAccent;
+  }
+
+  &__list {
+    max-height: 250px;
+    overflow-y: auto;
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      background-color: $colorDarkHover;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .weightedAverage-calculator {
+    padding: 1rem;
+
+    &__form,
+    &__values {
+      width: 100%;
+    }
+
+    &__controls {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+}
