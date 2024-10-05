@@ -196,25 +196,25 @@ table {
   top: 0;
   z-index: 1000;
 }
-.header .header__title {
+.header__title {
   font-size: 2.5rem;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #ffffff;
 }
-.header .header__title .header__title--highlight {
+.header__title--highlight {
   font-weight: 700;
   color: #d45039;
 }
-.header .header__logo {
+.header__logo {
   width: 80px;
   height: auto;
   transform: rotate(15deg);
   transition: transform 0.3s ease;
   filter: brightness(0.9) contrast(1.1);
 }
-.header .header__logo:hover {
+.header__logo:hover {
   transform: rotate(0deg);
 }
 
@@ -229,7 +229,6 @@ table {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .menu__item {
   width: 300px;
   background-color: #1e1e1e;
@@ -245,7 +244,6 @@ table {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   background-color: #2c2c2c;
 }
-
 .menu__item-title {
   font-size: 1.4em;
   margin-bottom: 15px;
@@ -259,14 +257,12 @@ table {
   transition: transform 0.3s ease;
   color: #ffd166;
 }
-
 .menu__item-list {
   list-style: none;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
 }
-
 .menu__item-list-element {
   background-color: #161616;
   color: #b3b3b3;
@@ -285,11 +281,9 @@ table {
   display: block;
   cursor: pointer;
 }
-
 .menu__item:hover .menu__item-list {
   max-height: 300px;
 }
-
 .menu__item:hover .menu__item-title i {
   transform: rotate(180deg);
 }
@@ -301,6 +295,9 @@ table {
   color: #b3b3b3;
   font-size: 0.9em;
   text-align: center;
+}
+.footer__text {
+  margin: 0;
 }
 
 a,
@@ -323,9 +320,10 @@ button:focus {
     max-width: 400px;
   }
   .header {
+    flex-direction: column;
     text-align: center;
   }
-  .header .header__logo {
+  .header__logo {
     margin-top: 1rem;
   }
 }
@@ -499,6 +497,7 @@ button:focus {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
+  color: #ffd166;
 }
 .average-calculator__values {
   display: none;
@@ -594,6 +593,7 @@ button:focus {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
+  color: #ffd166;
 }
 .bmi-calculator__table {
   width: 100%;
@@ -637,10 +637,75 @@ button:focus {
     padding: 0.5rem;
   }
 }
+.pitagoras-calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #121212;
+  color: #ffffff;
+  padding: 2rem;
+}
+.pitagoras-calculator__form {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.pitagoras-calculator__input {
+  width: calc(100% - 1.5rem);
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #2c2c2c;
+  border-radius: 5px;
+  background-color: #121212;
+  color: #ffffff;
+  font-size: 1rem;
+}
+.pitagoras-calculator__input::placeholder {
+  color: #b3b3b3;
+}
+.pitagoras-calculator__input:focus {
+  outline: none;
+  border-color: #2c7a7b;
+}
+.pitagoras-calculator__button {
+  width: calc(100% - 1.5rem);
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #d45039;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.pitagoras-calculator__button:hover {
+  background-color: #dd7563;
+}
+.pitagoras-calculator__result {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffd166;
+}
+
+@media (max-width: 600px) {
+  .pitagoras-calculator {
+    padding: 1rem;
+  }
+  .pitagoras-calculator__form {
+    padding: 1.5rem;
+  }
+}
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-color: #121212;
   font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;

@@ -3,58 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="shortcut icon"
-      href="./src/images/icons/calculadora.ico"
+      href="../images/icons/favicon.ico"
       type="image/x-icon"
     />
-    <title>Calculadora</title>
+    <title>MultiCalc</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="../styles/css/style.css" />
-    
+
+    <!-- BIBLIOTECAS -->
     <script
       src="https://kit.fontawesome.com/9bfb2428d0.js"
-      crossorigin="anonymous" defer
+      crossorigin="anonymous"
+      defer
     ></script>
 
-    <script src="src/scripts/pitagoras.js" defer></script>
+    <!-- JAVASCRIPT -->
+    <script src="../js/components/pitagoras.js" defer></script>
   </head>
 
   <body>
-    <a
-      class="fa-solid fa-home returnButton"
-      href="./index.html"
-      target="_self"
-    ></a>
+    <a class="return-button" href="../../index.html" target="_self">
+      <i class="fa-solid fa-home"></i>
+    </a>
 
-    <main class="mainContainer">
-      <form method="get" class="mainContainer__form mainContainer__Container">
-            <input
-              type="number"
-              name="form__inputNumber"
-              id="iform__cateto1"
-              class="form__inputNumber"
-              required
-              placeholder="Digite um dos catetos..."
-            />
-            <input
-              type="number"
-              name="form__inputNumber"
-              id="iform__cateto2"
-              class="form__inputNumber"
-              required
-              placeholder="Digite o outro cateto..."
-            />
-
+    <main class="pitagoras-calculator">
+      <form method="get" class="pitagoras-calculator__form">
         <input
-          type="button"
-          onclick="pitagoras()"
-          class="mainContainer__button"
-          id="calc__botao"
-          value="Calcular"
+          type="number"
+          name="pitagoras-calculator__cateto1"
+          id="pitagoras-calculator__cateto1"
+          class="pitagoras-calculator__input"
+          required
+          placeholder="Digite um dos catetos..."
+        />
+        <input
+          type="number"
+          name="pitagoras-calculator__cateto2"
+          id="pitagoras-calculator__cateto2"
+          class="pitagoras-calculator__input"
+          required
+          placeholder="Digite o outro cateto..."
         />
 
-        <div id="res"></div>
+        <button
+          type="button"
+          onclick="pitagoras()"
+          class="pitagoras-calculator__button"
+        >
+          Calcular
+        </button>
+
+        <div class="pitagoras-calculator__result"></div>
       </form>
     </main>
   </body>

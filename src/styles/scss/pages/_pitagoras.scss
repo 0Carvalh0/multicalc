@@ -1,0 +1,73 @@
+.pitagoras-calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $colorDarkBg;
+  color: $colorTextPrimary;
+  padding: 2rem;
+
+  &__form {
+    background-color: $colorDarkSurface;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &__input {
+    width: calc(100% - (0.75rem * 2));
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid $colorDarkHover;
+    border-radius: 5px;
+    background-color: $colorDarkBg;
+    color: $colorTextPrimary;
+    font-size: 1rem;
+
+    &::placeholder {
+      color: $colorTextSecondary;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $colorSecondary;
+    }
+  }
+
+  &__button {
+    width: calc(100% - (0.75rem * 2));
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: $colorPrimary;
+    color: $colorTextPrimary;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: lighten($colorPrimary, 10%);
+    }
+  }
+
+  &__result {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: $colorAccent;
+  }
+}
+
+@media (max-width: 600px) {
+  .pitagoras-calculator {
+    padding: 1rem;
+
+    &__form {
+      padding: 1.5rem;
+    }
+  }
+}

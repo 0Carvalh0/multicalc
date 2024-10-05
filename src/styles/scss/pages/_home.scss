@@ -10,20 +10,20 @@
   top: 0;
   z-index: 1000;
 
-  .header__title {
+  &__title {
     font-size: 2.5rem;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: $colorTextPrimary;
 
-    .header__title--highlight {
+    &--highlight {
       font-weight: 700;
       color: $colorPrimary;
     }
   }
 
-  .header__logo {
+  &__logo {
     width: 80px;
     height: auto;
     transform: rotate(15deg);
@@ -46,74 +46,76 @@
   padding: 60px 40px;
   max-width: 1200px;
   margin: 0 auto;
-}
 
-.menu__item {
-  width: 300px;
-  background-color: $colorDarkSurface;
-  border-radius: 15px;
-  padding: 25px;
-  position: relative;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  &__item {
+    width: 300px;
+    background-color: $colorDarkSurface;
+    border-radius: 15px;
+    padding: 25px;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    background-color: $colorDarkHover;
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background-color: $colorDarkHover;
+    }
+
+    &-title {
+      font-size: 1.4em;
+      margin-bottom: 15px;
+      color: $colorSecondary;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: default;
+
+      i {
+        transition: transform 0.3s ease;
+        color: $colorAccent;
+      }
+    }
+
+    &-list {
+      list-style: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+
+      &-element {
+        background-color: darken($colorDarkSurface, 3%);
+        color: $colorTextSecondary;
+        border-radius: 8px;
+        margin-top: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          color: $colorTextPrimary;
+        }
+
+        a {
+          padding: 12px 15px;
+          text-decoration: none;
+          color: inherit;
+          display: block;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &:hover {
+      .menu__item-list {
+        max-height: 300px;
+      }
+
+      .menu__item-title i {
+        transform: rotate(180deg);
+      }
+    }
   }
-}
-
-.menu__item-title {
-  font-size: 1.4em;
-  margin-bottom: 15px;
-  color: $colorSecondary;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: default;
-
-  i {
-    transition: transform 0.3s ease;
-    color: $colorAccent;
-  }
-}
-
-.menu__item-list {
-  list-style: none;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-}
-
-.menu__item-list-element {
-  background-color: darken($colorDarkSurface, 3%);
-  color: $colorTextSecondary;
-  border-radius: 8px;
-  margin-top: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
-
-  &:hover {
-    color: $colorTextPrimary;
-  }
-
-  a {
-    padding: 12px 15px;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    cursor: pointer;
-  }
-}
-
-.menu__item:hover .menu__item-list {
-  max-height: 300px;
-}
-
-.menu__item:hover .menu__item-title i {
-  transform: rotate(180deg);
 }
 
 .footer {
@@ -123,6 +125,10 @@
   color: $colorTextSecondary;
   font-size: 0.9em;
   text-align: center;
+
+  &__text {
+    margin: 0;
+  }
 }
 
 // Estilos específicos para elementos interativos
@@ -141,17 +147,18 @@ button {
 @media (max-width: 768px) {
   .menu {
     padding: 40px 20px;
-  }
 
-  .menu__item {
-    width: 100%;
-    max-width: 400px;
+    &__item {
+      width: 100%;
+      max-width: 400px;
+    }
   }
 
   .header {
+    flex-direction: column;
     text-align: center;
 
-    .header__logo {
+    &__logo {
       margin-top: 1rem;
     }
   }

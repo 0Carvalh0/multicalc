@@ -1,8 +1,8 @@
-const res = document.querySelector("#res");
+const res = document.querySelector(".pitagoras-calculator__result");
 
 function pitagoras() {
-  const a = document.querySelector("#iform__cateto1").value;
-  const b = document.querySelector("#iform__cateto2").value;
+  const a = document.querySelector("#pitagoras-calculator__cateto1").value;
+  const b = document.querySelector("#pitagoras-calculator__cateto2").value;
   let pitagoras = Math.sqrt(a ** 2 + b ** 2);
 
   if (a == 0 || b == 0) {
