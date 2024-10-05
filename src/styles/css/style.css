@@ -721,6 +721,11 @@ button:focus {
   margin-bottom: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.weightedAverage-calculator__form div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
 .weightedAverage-calculator__input {
   width: calc(100% - 1.5rem);
   padding: 0.75rem;

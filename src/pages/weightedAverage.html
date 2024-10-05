@@ -33,20 +33,22 @@
     <main class="weightedAverage-calculator">
       <form method="get" class="weightedAverage-calculator__form">
         <div>
-            <input
-              type="number"
-              name="weightedAverage-calculator__input"
-              class="weightedAverage-calculator__input"
-              required
-              placeholder="Digite um valor para fazer a média..."
+          <input
+            type="number"
+            name="weightedAverage-calculator__input"
+            class="weightedAverage-calculator__input"
+            id="weightedAverage__valueInput"
+            required
+            placeholder="Digite um valor para fazer a média..."
             />
             <input
-              type="number"
-              name="weightedAverage-calculator__input"
-              class="weightedAverage-calculator__input"
-              required
-              placeholder="Digite um peso para fazer a média..."
-            />
+            type="number"
+            name="weightedAverage-calculator__input"
+            class="weightedAverage-calculator__input"
+            id="weightedAverage__weightInput"
+            required
+            placeholder="Digite um peso para fazer a média..."
+          />
         </div>
 
         <section class="weightedAverage-calculator__controls">
@@ -66,7 +68,7 @@
           </button>
           <button
             type="button"
-            onclick="media()"
+            onclick="mediaPon()"
             class="weightedAverage-calculator__button weightedAverage-calculator__button--calculate"
           >
             Calcular
@@ -75,6 +77,11 @@
 
         <div class="weightedAverage-calculator__result"></div>
       </form>
+
+      <section class="weightedAverage-calculator__values">
+        <h2 class="weightedAverage-calculator__title">Valores para cálculo de média</h2>
+        <ul class="weightedAverage-calculator__list"></ul>
+      </section>
     </main>
   </body>
 </html>
