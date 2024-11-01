@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      href="../images/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>MultiCalc</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/css/style.css" />
+
+    <!-- BIBLIOTECAS -->
+    <script
+      src="https://kit.fontawesome.com/9bfb2428d0.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <!-- JAVASCRIPT -->
+    <script src="../js/components/standardDeviation.js" defer></script>
+  </head>
+
+  <body>
+    <a class="return-button" href="../../index.html" target="_self">
+      <i class="fa-solid fa-home"></i>
+    </a>
+
+    <main class="standardDeviation">
+      <form method="get" class="standardDeviation__form">
+        <input
+          type="number"
+          name="standardDeviation__input"
+          class="standardDeviation__input"
+          required
+          placeholder="Digite um valor para fazer o desvio padrão..."
+        />
+
+        <section class="standardDeviation__controls">
+          <button
+            type="button"
+            onclick="add()"
+            class="standardDeviation__button standardDeviation__button--add"
+          >
+            Adicionar
+          </button>
+          <button
+            type="button"
+            onclick="remove()"
+            class="standardDeviation__button standardDeviation__button--remove"
+          >
+            Remover
+          </button>
+          <button
+            type="button"
+            onclick="media()"
+            class="standardDeviation__button standardDeviation__button--calculate"
+          >
+            Calcular
+          </button>
+        </section>
+
+        <div class="standardDeviation__result"></div>
+      </form>
+    </main>
+  </body>
+</html>
